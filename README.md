@@ -16,7 +16,16 @@ This Readme will be updated regularly to include information about the code and 
 7. [Running code at Case HPC](#running-code-at-case-hpc)
 8. [Acknowledgments](#acknowledgments)
 
+## Getting Started
 
-[Getting Started](#getting-started)
-http://www.kaldi-asr.org/
-https://github.com/kaldi-asr/kaldi
+### Prerequisites
+	* [Kaldi ASR](https://github.com/kaldi-asr/kaldi)
+
+
+### Installing
+* Open terminal and type following commands.
+	```bash
+	$ git clone https://github.com/AASHISHAG/asr-german.git
+	$ cd asr-german
+	$ pip install -r requirements.txt 
+	```
