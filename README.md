@@ -15,3 +15,8 @@ This Readme will be updated regularly to include information about the code and 
 6. [Exporting model and Testing](#exporting-model-and-testing)
 7. [Running code at Case HPC](#running-code-at-case-hpc)
 8. [Acknowledgments](#acknowledgments)
+
+
+[Getting Started](#getting-started)
+http://www.kaldi-asr.org/
+https://github.com/kaldi-asr/kaldi
