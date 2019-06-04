@@ -1,7 +1,4 @@
 # Automatic Speech Recognition (ASR) - German
-_This is my [Google Summer of Code 2019](https://summerofcode.withgoogle.com/projects/#5623384702976000) Project with the [Distributed Little Red Hen Lab](http://www.redhenlab.org/)._
-
-The aim of this project is to develop a working Speech to Text module for the Red Hen Lab’s current Audio processing pipeline. This system will be used to transcribe the Television news broadcast captured by Red Hen in Germany.
 
 This Readme will be updated regularly to include information about the code and guidelines to use this software.
 
