@@ -19,7 +19,7 @@ This Readme will be updated regularly to include information about the code and 
 ## Getting Started
 
 ### Prerequisites
-	* [Kaldi ASR](https://github.com/kaldi-asr/kaldi)
+	[Kaldi ASR](https://github.com/kaldi-asr/kaldi)
 
 
 ### Installing
