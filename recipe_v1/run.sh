@@ -3,8 +3,8 @@
 # This script is adapted from swbd Kaldi run.sh (https://github.com/kaldi-asr/kaldi
 # Copyright 2019 Kaldi developers (see: https://github.com/kaldi-asr/kaldi/blob/master/COPYING)
 
-[ ! -L "steps" ] && ln -s ../../wsj/s5/steps
-[ ! -L "utils" ] && ln -s ../../wsj/s5/utils
+[ ! -L "steps" ] && ln -s ../steps
+[ ! -L "utils" ] && ln -s ../utils
 [ ! -L "rnnlm" ] && ln -s ../../../scripts/rnnlm/
 
 python3 local/prepare_dir_structure.py
@@ -24,6 +24,19 @@ if [ ! -d data/wav/german-speechdata-package-v2 ]
       cd ../../
 fi
 
+python3 local/move_files_to_skip.py data/wav/german-speechdata-package-v2/train/
+
+find $RAWDATA/*/$FILTERBYNAME -type f > data/waveIDs.txt
+
+# prepares directories in Kaldi format for the TUDA speech corpus
+python3 local/data_prepare.py -f data/waveIDs.txt --separate-mic-dirs
+
+# If want to do experiments with very noisy data, you can also create Kaldi dirs for the Realtek microphone. Disabled in train/test/dev by default.
+# python3 local/data_prepare.py -f data/waveIDs.txt -p _Realtek -k _e
+
+local/get_utt2dur.sh data/tuda_train
+
+
 if [ ! -f $data/local/g2p_300k4/de_g2p_model-6 ]
   then
       mkdir -p ${data/local/g2p_300k4}/
@@ -37,3 +50,5 @@ if [ ! -f $data/local/g2p_300k4/de_g2p_model-6 ]
   else
       echo "G2P model file already exists, not recreating it."
 fi
+
+
