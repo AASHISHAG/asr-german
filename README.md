@@ -29,6 +29,9 @@ This Readme will be updated regularly to include information about the code and 
 	* [Subversion](https://help.ubuntu.com/lts/serverguide/subversion.html)
 	* [Python](https://www.python.org/)	
 
+* **Graphics Processing Unit (GPU)**:
+	* [Cuda](https://developer.nvidia.com/cuda-zone)
+
 
 ### Installing
 [Kaldi ASR](https://github.com/kaldi-asr/kaldi)
