@@ -19,7 +19,7 @@ This Readme will be updated regularly to include information about the code and 
 
 ### Prerequisites
 
-* **Kaldi**:
+* **Libraries**:
 	* [Git Large File Storage](https://git-lfs.github.com/)
 	* [Zlib1g-dev](https://packages.debian.org/stretch/zlib1g-dev)
 	* [Automake](https://packages.ubuntu.com/search?keywords=automake)
@@ -28,6 +28,12 @@ This Readme will be updated regularly to include information about the code and 
 	* [Sox](http://manpages.ubuntu.com/manpages/bionic/man1/sox.1.html)
 	* [Subversion](https://help.ubuntu.com/lts/serverguide/subversion.html)
 	* [Python](https://www.python.org/)	
+
+* **Kaldi**:
+	* [Numpy](https://www.numpy.org/)
+	* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
+	* [LXml](https://pypi.org/project/lxml/)
+	* [Requests](https://pypi.org/project/requests/)
 
 * **Graphics Processing Unit (GPU)**:
 	* [Cuda](https://developer.nvidia.com/cuda-zone)
