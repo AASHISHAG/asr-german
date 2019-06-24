@@ -22,13 +22,12 @@ This Readme will be updated regularly to include information about the code and 
 * **Kaldi**:
 	* [Git Large File Storage](https://git-lfs.github.com/)
 	* [Zlib1g-dev](https://packages.debian.org/stretch/zlib1g-dev)
-	* [Automake](https://www.gnu.org/software/automake/)
-	* [Autoconf](https://pypi.python.org/pypi/python_speech_features)
-	* [Unzip](https://pypi.python.org/pypi/sox)
-	* [Sox](https://pypi.python.org/pypi/pandas#downloads)
-	* [Subversion](https://www.ffmpeg.org/download.html)
-	* [Python](https://www.ffmpeg.org/download.html)
-	
+	* [Automake](https://packages.ubuntu.com/search?keywords=automake)
+	* [Autoconf](https://packages.ubuntu.com/search?keywords=autoconf)
+	* [Unzip](https://linux.die.net/man/1/unzip)
+	* [Sox](http://manpages.ubuntu.com/manpages/bionic/man1/sox.1.html)
+	* [Subversion](https://help.ubuntu.com/lts/serverguide/subversion.html)
+	* [Python](https://www.python.org/)	
 
 
 ### Installing
