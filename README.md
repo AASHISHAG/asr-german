@@ -65,7 +65,7 @@ This Readme will be updated regularly to include information about the code and 
 	
 	* [_Cuda-Downloads_](https://developer.nvidia.com/cuda-downloads)
 
-* **Kaldi__**:
+* **Kaldi_**:
 	
 	**_STEP 1:_**
 	```bash
