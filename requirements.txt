@@ -1,0 +1,10 @@
+apt-get install \
+        zlib1g-dev \
+        automake \
+        autoconf \
+        unzip \
+        sox  \
+        libtool \
+        subversion \
+        python2.7 \
+        python3=3.5.1
