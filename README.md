@@ -66,14 +66,14 @@ This Readme will be updated regularly to include information about the code and 
 	* [_Cuda-Downloads_](https://developer.nvidia.com/cuda-downloads)
 
 * **Kaldi**:	
-	** STEP 1:**
+	**_STEP 1:_**
 	```bash
 	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
 	$ cd kaldi-trunk
 	$ pip3 install -r requirements.txt
 	```
 	
-	* STEP 2:
+	**_STEP 2:_**
 	```bash
 	$ cd tools
 	$ sudo extras/install_mkl.sh
@@ -84,7 +84,7 @@ This Readme will be updated regularly to include information about the code and 
 	1. _IRSTLM is not installed by default anymore. If you need IRSTLM Warning: use the script extras/install_irstlm.sh_
 	2. _Please source the tools/extras/env.sh in your path.sh to enable it._
 	
-	* STEP 3:
+	**_STEP 3:_**
 	```bash
 	$ cd ../src
 	$ sudo ./configure --use-cuda --cudatk-dir=/usr/local/cuda/ --cuda-arch=-arch=sm_70 --shared
