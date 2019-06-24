@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # This script is adapted from swbd Kaldi run.sh (https://github.com/kaldi-asr/kaldi
-# Copyright 2019 Kaldi developers (see: https://github.com/kaldi-asr/kaldi/blob/master/COPYING)
 
 export train_cmd="utils/run.pl"
 export decode_cmd="utils/run.pl"
