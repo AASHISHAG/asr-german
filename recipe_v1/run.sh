@@ -32,7 +32,6 @@ g2p_dir=data/local/g2p${dict_suffix}
 lm_dir=data/local/lm${dict_suffix}
 arpa_lm=${lm_dir}/4gram-mincount/lm_pr10.0.gz
 
-
 python3 local/prepare_dir_structure.py
 
 wget --directory-prefix=data/wav/ http://speech.tools/kaldi_tuda_de/german-speechdata-package-v2.tar.gz
