@@ -41,8 +41,6 @@ This Readme will be updated regularly to include information about the code and 
 ### Installation
 
 * **Libraries**:
-    * _Open terminal and type following commands_.
-	
 	
 	```bash
 	$ sudo apt-get update
@@ -67,12 +65,17 @@ This Readme will be updated regularly to include information about the code and 
 	
 	* [_Cuda-Downloads_](https://developer.nvidia.com/cuda-downloads)
 
-* **Kaldi**:
-	* Open terminal and type following commands.
-	
+* **Kaldi**:	
 	
 	```bash
 	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
 	$ cd kaldi-trunk
-	$ pip3 install -r requirements.txt 
+	$ pip3 install -r requirements.txt
+	
+	```bash
+	$ cd tools
+	$ sudo extras/install_mkl.sh
+	$ sudo extras/install_irstlm.sh 
 	```
+	
+	**_IGNORE ERROR_**: _IRSTLM is not installed by default anymore. If you need IRSTLM Warning: use the script extras/install_irstlm.sh_
