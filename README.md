@@ -74,5 +74,5 @@ This Readme will be updated regularly to include information about the code and 
 	```bash
 	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
 	$ cd kaldi-trunk
-	$ pip install -r requirements.txt 
+	$ pip3 install -r requirements.txt 
 	```
