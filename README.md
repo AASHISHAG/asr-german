@@ -61,15 +61,9 @@ This Readme will be updated regularly to include information about the code and 
 	$ sudo apt-get install cuda
 	```
 	
-	* _Cuda-Installation-Guide-Linux_
-	```text
-	_https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html_
-	```
+	* [_Cuda-Installation-Guide-Linux_](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
 	
-	* _Cuda-Downloads_
-	```text
-	_https://developer.nvidia.com/cuda-downloads_
-	```
+	* [_Cuda-Downloads_](https://developer.nvidia.com/cuda-downloads)
 
 * **Kaldi**:
 	* [Git Large File Storage](https://git-lfs.github.com/)
