@@ -146,17 +146,17 @@ for x in swc_train tuda_train dev test; do
     utils/fix_data_dir.sh data/$x # some files fail to get mfcc for many reasons
     steps/compute_cmvn_stats.sh data/$x exp/make_mfcc/$x $mfccdir
     utils/fix_data_dir.sh data/$x
-	done
+done
 	
 combine_data.sh data/train data/tuda_train data/swc_train
 
 for x in train dev test; do
-        utils/fix_data_dir.sh data/$x # some files fail to get mfcc for many reasons
-        steps/make_mfcc.sh --cmd "$train_cmd" --nj $nJobs data/$x exp/make_mfcc/$x $mfccdir
-        utils/fix_data_dir.sh data/$x # some files fail to get mfcc for many reasons
-        steps/compute_cmvn_stats.sh data/$x exp/make_mfcc/$x $mfccdir
-        utils/fix_data_dir.sh data/$x
-    done
+    utils/fix_data_dir.sh data/$x # some files fail to get mfcc for many reasons
+    steps/make_mfcc.sh --cmd "$train_cmd" --nj $nJobs data/$x exp/make_mfcc/$x $mfccdir
+    utils/fix_data_dir.sh data/$x # some files fail to get mfcc for many reasons
+    steps/compute_cmvn_stats.sh data/$x exp/make_mfcc/$x $mfccdir
+    utils/fix_data_dir.sh data/$x
+done
 
 mv data/train data/train_without_mailabs 
 x=m_ailabs_train
