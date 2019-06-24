@@ -1,11 +1,36 @@
 #!/bin/bash
 
-# This script is adapted from swbd Kaldi run.sh (https://github.com/kaldi-asr/kaldi
+# This script is adapted from swbd Kaldi and Language Technology, Hamburg run.sh (https://github.com/kaldi-asr/kaldi
 # Copyright 2019 Kaldi developers (see: https://github.com/kaldi-asr/kaldi/blob/master/COPYING)
 
 [ ! -L "steps" ] && ln -s ../steps
 [ ! -L "utils" ] && ln -s ../utils
 [ ! -L "rnnlm" ] && ln -s ../../../scripts/rnnlm/
+
+. utils/parse_options.sh
+
+utf8()
+{
+    iconv -f ISO-8859-1 -t UTF-8 $1 > $1.tmp
+    mv $1.tmp $1
+}
+
+
+extra_words_file=local/extra_words.txt
+extra_words_file=local/filtered_300k_vocab_de_wiki.txt
+
+dict_suffix=_300k4
+
+dict_dir=data/local/dict${dict_suffix}
+local_lang_dir=data/local/lang${dict_suffix}
+lang_dir=data/lang${dict_suffix}
+lang_dir_nosp=${lang_dir}_nosp${dict_suffix}
+format_lang_out_dir=${lang_dir}_test
+g2p_dir=data/local/g2p${dict_suffix}
+lm_dir=data/local/lm${dict_suffix}
+arpa_lm=${lm_dir}/4gram-mincount/lm_pr10.0.gz
+
+
 
 python3 local/prepare_dir_structure.py
 
