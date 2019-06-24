@@ -41,7 +41,7 @@ This Readme will be updated regularly to include information about the code and 
 ### Installation
 
 * **Libraries**:
-    Open terminal and type following commands.
+    - Open terminal and type following commands.
 	
 	```bash
 	$ sudo apt-get update
@@ -49,7 +49,7 @@ This Readme will be updated regularly to include information about the code and 
 	```
 	
 * **Graphics Processing Unit (GPU)**:
-    _Ubuntu 16.04_
+    - _Ubuntu 16.04_
 	
 	```bash
 	$ sudo apt-get install linux-headers-$(uname -r)
