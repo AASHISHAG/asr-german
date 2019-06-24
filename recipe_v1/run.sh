@@ -108,7 +108,6 @@ $sequitur_g2p -e utf8 --model $final_g2p_model --apply ${g2p_dir}/oov.txt > ${di
 cat ${dict_dir}/oov_lexicon.txt | gawk '{$1=$1" 1.0"; print }' > ${dict_dir}/_oov_lexiconp.txt
 gawk 'NF>=3' ${dict_dir}/_oov_lexiconp.txt > ${dict_dir}/oov_lexiconp.txt
 
-
 sort -u ${dict_dir}/_lexiconp.txt ${dict_dir}/oov_lexiconp.txt > ${dict_dir}/lexiconp.txt
 
 rm ${dict_dir}/lexicon.txt
@@ -127,7 +126,6 @@ mv ${lm_dir}/German_sentences_8mil_filtered_maryfied.txt.gz ${lm_dir}/cleaned.gz
 local/build_lm.sh --srcdir ${local_lang_dir} --dir ${lm_dir}
 
 local/format_data.sh --arpa_lm $arpa_lm --lang_in_dir $lang_dir --lang_out_dir $format_lang_out_dir
-fi
 
 rm data/swc_train/spk2utt
 cat data/swc_train/segments | sort > data/swc_train/segments_sorted
