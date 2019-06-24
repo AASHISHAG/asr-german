@@ -102,3 +102,6 @@ This Readme will be updated regularly to include information about the code and 
 	$ make -j clean depend `nproc`
 	$ make -j `nproc`
 	```
+	
+	**_NOTE_**:
+	The entire process can take **_3-4_** hours, depending on the server configurations.
