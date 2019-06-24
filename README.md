@@ -68,13 +68,11 @@ This Readme will be updated regularly to include information about the code and 
 	* [_Cuda-Downloads_](https://developer.nvidia.com/cuda-downloads)
 
 * **Kaldi**:
-	* [Git Large File Storage](https://git-lfs.github.com/)
-
+	* Open terminal and type following commands.
 	
-[Kaldi ASR](https://github.com/kaldi-asr/kaldi)
-* Open terminal and type following commands.
+	
 	```bash
-	$ git clone https://github.com/AASHISHAG/asr-german.git
-	$ cd asr-german
+	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
+	$ cd kaldi-trunk
 	$ pip install -r requirements.txt 
 	```
