@@ -29,17 +29,44 @@ This Readme will be updated regularly to include information about the code and 
 	* [Subversion](https://help.ubuntu.com/lts/serverguide/subversion.html)
 	* [Python](https://www.python.org/)	
 
+* **Graphics Processing Unit (GPU)**:
+	* [Cuda](https://developer.nvidia.com/cuda-zone)
+
 * **Kaldi**:
 	* [Numpy](https://www.numpy.org/)
 	* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
 	* [LXml](https://pypi.org/project/lxml/)
 	* [Requests](https://pypi.org/project/requests/)
 
+### Installation
+
+* **Libraries**:
+	* Open terminal and type following commands.
+	```bash
+	$ sudo apt-get update
+	$ sudo apt-get -r requirements.txt 
+	```
+	
 * **Graphics Processing Unit (GPU)**:
-	* [Cuda](https://developer.nvidia.com/cuda-zone)
+	* _Ubuntu 16.04_
+	
+	```bash
+	$ sudo apt-get install linux-headers-$(uname -r)
+	$ wget https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda-repo-ubuntu1604-10-1-local-10.1.168-418.67_1.0-1_amd64.deb
+	$ sudo dpkg -i cuda-repo-ubuntu1604-10-1-local-10.1.168-418.67_1.0-1_amd64.deb
+	$ sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+	$ sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pub
+	$ sudo apt-get update
+	$ sudo apt-get install cuda
+	```
+	
+	_https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html_
+	_https://developer.nvidia.com/cuda-downloads_
 
+* **Kaldi**:
+	* [Git Large File Storage](https://git-lfs.github.com/)
 
-### Installing
+	
 [Kaldi ASR](https://github.com/kaldi-asr/kaldi)
 * Open terminal and type following commands.
 	```bash
