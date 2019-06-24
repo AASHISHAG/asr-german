@@ -65,9 +65,9 @@ This Readme will be updated regularly to include information about the code and 
 	
 	* [_Cuda-Downloads_](https://developer.nvidia.com/cuda-downloads)
 
-* **Kaldi_**:
+* **Kaldi**:
 	
-	**_STEP 1:_**
+	**._STEP 1:_**
 	```bash
 	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
 	$ cd kaldi-trunk
