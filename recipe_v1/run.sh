@@ -124,7 +124,6 @@ wget --directory-prefix=${lm_dir}/ http://speech.tools/kaldi_tuda_de/German_sent
 mv ${lm_dir}/German_sentences_8mil_filtered_maryfied.txt.gz ${lm_dir}/cleaned.gz
 
 local/build_lm.sh --srcdir ${local_lang_dir} --dir ${lm_dir}
-
 local/format_data.sh --arpa_lm $arpa_lm --lang_in_dir $lang_dir --lang_out_dir $format_lang_out_dir
 
 rm data/swc_train/spk2utt
