@@ -69,9 +69,10 @@ This Readme will be updated regularly to include information about the code and 
 	
 	**._STEP 1:_**
 	```bash
-	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
-	$ cd kaldi-trunk
+	$ git clone https://github.com/AASHISHAG/asr-german.git
+	$ cd asr-german
 	$ pip3 install -r requirements.txt
+	$ cd ..
 	```
 	
 	**_STEP 2:_**
@@ -86,7 +87,7 @@ This Readme will be updated regularly to include information about the code and 
 	$ sudo extras/install_mkl.sh
 	$ sudo extras/install_irstlm.sh
 	$ sudo extras/check_dependencies.sh
-	$ make -j `nproc`
+	$ sudo make USE_THREAD=0 FC=gfortran -j `nproc`
 	```
 	
 	**_IGNORE ERROR/WARNINGS_**:
