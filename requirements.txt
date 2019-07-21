@@ -7,4 +7,6 @@ apt-get install \
         libtool \
         subversion \
         python2.7 \
-        python3=3.5.2
+        python3=3.5.2 \
+        libpcre3 \
+        libpcre3-dev

@@ -116,3 +116,21 @@ This Readme will be updated regularly to include information about the code and 
 	$ git clone https://github.com/sequitur-g2p/sequitur-g2p.git
 	$ make -j `nproc`
 	```
+	
+* **Swig**:	
+	```bash
+	$ wget https://netix.dl.sourceforge.net/project/swig/swig/swig-4.0.0/swig-4.0.0.tar.gz
+	$ chmod 777 swig-4.0.0.tar.gz
+	$ tar -xzvf swig-4.0.0.tar.gz
+	$ cd swig-4.0.0/
+	$ sudo ./configure --prefix=/home/rsa-key-20181219/swig-4.0.0
+	$ sudo make -j 4
+	$ sudo make install
+	$ sudo vim /etc/profile
+	$ export SWIG_PATH=/home/LTLab.lan/agarwal/backup/swig-4.0.0
+	$ export SWIG_PATH=/home/rsa-key-20181219/swig-4.0.0/bin
+	$ export PATH=$SWIG_PATH:$PATH
+	$ source /etc/profile
+	$ swig -version
+	```
+	
