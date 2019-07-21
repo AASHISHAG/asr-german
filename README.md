@@ -112,7 +112,6 @@ This Readme will be updated regularly to include information about the code and 
 * **Sequitur-G2P**:
 	
 	```bash
-	$ pip3 install numpy
 	$ pip3 install git+https://github.com/sequitur-g2p/sequitur-g2p@master
 	$ git clone https://github.com/sequitur-g2p/sequitur-g2p.git
 	$ make -j `nproc`
