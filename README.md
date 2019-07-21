@@ -37,6 +37,9 @@ This Readme will be updated regularly to include information about the code and 
 	* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
 	* [LXml](https://pypi.org/project/lxml/)
 	* [Requests](https://pypi.org/project/requests/)
+	
+* **Grapheme-to-Phoneme**:
+	* [Sequitur-G2P](https://github.com/sequitur-g2p/sequitur-g2p)
 
 ### Installation
 
