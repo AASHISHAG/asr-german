@@ -20,6 +20,7 @@ This Readme will be updated regularly to include information about the code and 
 ### Prerequisites
 
 * **Libraries**:
+
 	* [Git Large File Storage](https://git-lfs.github.com/)
 	* [Zlib1g-dev](https://packages.debian.org/stretch/zlib1g-dev)
 	* [Automake](https://packages.ubuntu.com/search?keywords=automake)
@@ -30,18 +31,22 @@ This Readme will be updated regularly to include information about the code and 
 	* [Python](https://www.python.org/)	
 
 * **Graphics Processing Unit (GPU)**:
+
 	* [Cuda](https://developer.nvidia.com/cuda-zone)
 
 * **Kaldi**:
+
 	* [Numpy](https://www.numpy.org/)
 	* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
 	* [LXml](https://pypi.org/project/lxml/)
 	* [Requests](https://pypi.org/project/requests/)
 	
 * **SWIG**:
+
 	* [Swig](http://www.swig.org/)
 	
 * **Grapheme-to-Phoneme**:
+
 	* [Sequitur-G2P](https://github.com/sequitur-g2p/sequitur-g2p)
 
 ### Installation
@@ -74,6 +79,7 @@ This Readme will be updated regularly to include information about the code and 
 * **Kaldi**:
 	
 	**._STEP 1:_**
+
 	```bash
 	$ git clone https://github.com/AASHISHAG/asr-german.git
 	$ cd asr-german
@@ -82,12 +88,14 @@ This Readme will be updated regularly to include information about the code and 
 	```
 	
 	**_STEP 2:_**
+
 	```bash
 	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
 	$ cd kaldi-trunk
 	```
 	
 	**_STEP 3:_**
+
 	```bash
 	$ cd tools
 	$ sudo extras/install_mkl.sh
@@ -101,6 +109,7 @@ This Readme will be updated regularly to include information about the code and 
 	2. _Please source the tools/extras/env.sh in your path.sh to enable it._
 	
 	**_STEP 4:_**
+
 	```bash
 	$ cd ../src
 	$ sudo ./configure --use-cuda --cudatk-dir=/usr/local/cuda/ --cuda-arch=-arch=sm_70 --shared
@@ -113,6 +122,7 @@ This Readme will be updated regularly to include information about the code and 
 	The entire process can take **_3-4 hours_**, depending on the server configurations.
 	
 * **Swig**:	
+
 	```bash
 	$ wget https://netix.dl.sourceforge.net/project/swig/swig/swig-4.0.0/swig-4.0.0.tar.gz
 	$ chmod 777 swig-4.0.0.tar.gz
