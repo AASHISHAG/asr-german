@@ -112,14 +112,6 @@ This Readme will be updated regularly to include information about the code and 
 	**_NOTE_**:
 	The entire process can take **_3-4 hours_**, depending on the server configurations.
 	
-* **Sequitur-G2P**:
-	
-	```bash
-	$ pip3 install git+https://github.com/sequitur-g2p/sequitur-g2p@master
-	$ git clone https://github.com/sequitur-g2p/sequitur-g2p.git
-	$ make -j `nproc`
-	```
-	
 * **Swig**:	
 	```bash
 	$ wget https://netix.dl.sourceforge.net/project/swig/swig/swig-4.0.0/swig-4.0.0.tar.gz
@@ -127,7 +119,7 @@ This Readme will be updated regularly to include information about the code and 
 	$ tar -xzvf swig-4.0.0.tar.gz
 	$ cd swig-4.0.0/
 	$ sudo ./configure --prefix=/home/swig-4.0.0
-	$ sudo make -j 4
+	$ sudo make -j `nproc`
 	$ sudo make install
 	$ sudo vim /etc/profile
 	$ export SWIG_PATH=/home/swig-4.0.0
@@ -137,3 +129,10 @@ This Readme will be updated regularly to include information about the code and 
 	$ swig -version
 	```
 	
+* **Sequitur-G2P**:
+	
+	```bash
+	$ pip3 install git+https://github.com/sequitur-g2p/sequitur-g2p@master
+	$ git clone https://github.com/sequitur-g2p/sequitur-g2p.git
+	$ make -j `nproc`
+	```
