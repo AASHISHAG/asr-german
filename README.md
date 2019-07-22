@@ -62,6 +62,8 @@ This Readme will be updated regularly to include information about the code and 
 
     * _Ubuntu 16.04_
 	
+	
+	
 	```bash
 	$ sudo apt-get install linux-headers-$(uname -r)
 	$ wget https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda-repo-ubuntu1604-10-1-local-10.1.168-418.67_1.0-1_amd64.deb
