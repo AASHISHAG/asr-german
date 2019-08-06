@@ -10,32 +10,27 @@ From:ubuntu:latest
         export LC_ALL=en_US.UTF-8
 
 %post
-        apt update
-		apt-get install \
-        zlib1g-dev \
-        automake \
-        autoconf \
-        unzip \
-        sox  \
-        libtool \
-        subversion \
-        python2.7 \
-        python3=3.5.2 \
-        libpcre3 \
-        libpcre3-dev  \
-		apt-get install \
-		gfortran \
-		build-essential \
-		automake \
-		git \
-		zlib1g-dev \
-		libtool \
-		subversion \
-		curl \
-		vim \
-		python-pip \
-		screen \
-		g++
-		        
+        apt-get update
+		apt-get install -y zlib1g-dev \
+                automake \
+                autoconf \
+                unzip \
+                sox \
+                libtool \
+                subversion \
+                python2.7 \
+                python3  \
+                libpcre3 \
+                libpcre3-dev \
+				gfortran \
+				build-essential \
+				git \
+				zlib1g-dev \
+				libtool \
+				curl \
+				vim \
+				python-pip \
+				screen
+		
 %runscript
         echo "Running OCR. Output in file outputs/output.txt"
