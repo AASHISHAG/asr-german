@@ -302,3 +302,6 @@ for dset in dev test; do
                     --config conf/decode.config \
                     $graph_dir data/${dset} exp/tri4/decode_${dset}_pron
 done
+
+./local/run_cleanup_segmentation.sh --langdir ${lang_dir}
+./local/run_tdnn_1f.sh --lang_dir ${lang_dir}
