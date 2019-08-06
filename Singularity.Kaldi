@@ -11,16 +11,31 @@ From:ubuntu:latest
 
 %post
         apt update
-        apt install -y python3-pip build-essential libssl-dev libffi-dev python3-dev wget language-pack-en
-        apt install  -y tesseract-ocr
-        apt install -y libtesseract-dev libsm-dev
-        pip3 install pytesseract opencv-python numpy pandas
-        wget -O /usr/share/tesseract-ocr/4.00/tessdata/hin.traineddata https://github.com/tesseract-ocr/tessdata/raw/master/hin.traineddata
-        wget -O /usr/share/tesseract-ocr/4.00/tessdata/ben.traineddata https://github.com/tesseract-ocr/tessdata/raw/master/ben.traineddata
-
+		apt-get install \
+        zlib1g-dev \
+        automake \
+        autoconf \
+        unzip \
+        sox  \
+        libtool \
+        subversion \
+        python2.7 \
+        python3=3.5.2 \
+        libpcre3 \
+        libpcre3-dev  \
+		apt-get install \
+		gfortran \
+		build-essential \
+		automake \
+		git \
+		zlib1g-dev \
+		libtool \
+		subversion \
+		curl \
+		vim \
+		python-pip \
+		screen \
+		g++
+		        
 %runscript
-        #cp hin.traineddata ben.traineddata /usr/share/tesseract-ocr/4.00/tessdata/
-        echo "The code takes one input input.png and returns the OCR output in the file outputs/output.txt" 
-        echo "Running text detection. The output can be found in the file outputs/out.jpg"
         echo "Running OCR. Output in file outputs/output.txt"
-        #python3 bengali.py
