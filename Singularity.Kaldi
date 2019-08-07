@@ -11,23 +11,23 @@ From:ubuntu:latest
 
 %post
         apt-get update
-		apt-get install -y zlib1g-dev automake autoconf unzip sox libtool subversion python2.7 python3  libpcre3 libpcre3-dev gfortran build-essential git zlib1g-dev libtool curl vim python-pip screen gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-pulseaudio gstreamer1.0-plugins-ugly gstreamer1.0-tools libgstreamer1.0-dev libjansson-dev python-gi
+		apt-get install -y zlib1g-dev automake autoconf unzip sox libtool subversion python2.7 python3  libpcre3 libpcre3-dev gfortran build-essential git zlib1g-dev libtool curl vim python-pip screen gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-pulseaudio gstreamer1.0-plugins-ugly gstreamer1.0-tools libgstreamer1.0-dev libjansson-dev python-gi wget
 		pip install --upgrade ws4py==0.3.2 pyyaml tornado
 		wget http://github.com/xianyi/OpenBLAS/archive/v0.2.18.tar.gz
 		tar -xzvf v0.2.18.tar.gz
 		cd OpenBLAS-0.2.18
 		make BINARY=64 FC=gfortran USE_THREAD=0
-		sudo mkdir /opt/openblas_st
-		sudo make PREFIX=/opt/openblas_st install
+		mkdir /opt/openblas_st
+		make PREFIX=/opt/openblas_st install
 		git clone https://github.com/kaldi-asr/kaldi.git
 		cd kaldi/tools
-		sudo extras/install_mkl.sh
-		sudo extras/install_irstlm.sh
-		sudo extras/check_dependencies.sh
+		extras/install_mkl.sh
+		extras/install_irstlm.sh
+		extras/check_dependencies.sh
 		make -j `nproc`
 		cd ../src
-		sudo ./configure --shared --static-math=yes --mathlib=OPENBLAS --openblas-root=/opt/openblas_st/ --use-cuda=no
-		sudo extras/install_irstlm.sh
+		./configure --shared --static-math=yes --mathlib=OPENBLAS --openblas-root=/opt/openblas_st/ --use-cuda=no
+		extras/install_irstlm.sh
 		make depend -j `nproc`; make -j `nproc`
 		cd ..
 		export KALDI_ROOT=$(pwd)
