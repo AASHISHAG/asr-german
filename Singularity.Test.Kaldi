@@ -19,4 +19,4 @@ From:ubuntu:latest
 		npm install -g @angular/cli
 		
 %runscript
-        echo "Successfully installed the dependencies..."
+        echo "Successfully installed the dependencies...."
