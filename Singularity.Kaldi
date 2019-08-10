@@ -24,4 +24,4 @@ From:ubuntu:latest
 		npm install
 		
 %runscript
-        echo "Successfully installed the dependencies."
+        echo "Successfully installed the dependencies"
