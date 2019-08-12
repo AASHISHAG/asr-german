@@ -6,12 +6,12 @@ From:ubuntu:latest
 
 %environment
         export LANGUAGE=en_US.UTF-8
-        export LANG=en_US.UTF-8
         export LC_ALL=en_US.UTF-8
+		export LANG=en_US.UTF-8
 
 %post
         apt-get update
-		apt-get install -y zlib1g-dev automake autoconf unzip sox libtool subversion python2.7 python3  libpcre3 libpcre3-dev gfortran build-essential git zlib1g-dev libtool curl vim python-pip screen gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-pulseaudio gstreamer1.0-plugins-ugly gstreamer1.0-tools libgstreamer1.0-dev libjansson-dev python-gi wget python3-pip libsndfile1 software-properties-common
+		apt-get install -y zlib1g-dev automake autoconf unzip sox libtool subversion python2.7 python3  libpcre3 libpcre3-dev gfortran build-essential git zlib1g-dev libtool curl vim python-pip screen gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-pulseaudio gstreamer1.0-plugins-ugly gstreamer1.0-tools libgstreamer1.0-dev libjansson-dev python-gi wget python3-pip libsndfile1 software-properties-common ffmpeg
 		pip install --upgrade ws4py==0.3.2 pyyaml tornado
 		pip3 install sox python_speech_features pyxdg bs4 six requests tables attrdict setuptools librosa soundfile flask wave soundfile flask_cors
 		curl -sL https://deb.nodesource.com/setup_12.x | bash -
@@ -19,9 +19,9 @@ From:ubuntu:latest
 		npm install -g @angular/cli
 		npm install @angular/cli --save
 		npm install @angular/compiler-cli --save
-		npm install --save-dev @angular-devkit/build-angular
 		npm install @angular-devkit/core --save-dev
+		npm install --save-dev @angular-devkit/build-angular
 		npm install
 		
 %runscript
-        echo "Successfully installed the dependencies"
+        echo "Successfully installed the dependencies."
