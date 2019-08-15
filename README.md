@@ -151,7 +151,7 @@ This Readme will be updated regularly to include information about the code and 
 	$ make -j `nproc`
 	```
 	
-	*_You can now test if the GST-Kaldi-NNET2-Online installation works:_*
+	**_You can now test if the GST-Kaldi-NNET2-Online installation works:_**
 	
 	```bash
 	$ GST_PLUGIN_PATH=$KALDI_ROOT/tools/gst-kaldi-nnet2-online/src gst-inspect-1.0 kaldinnet2onlinedecoder
