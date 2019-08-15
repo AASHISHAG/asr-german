@@ -154,32 +154,21 @@ This Readme will be updated regularly to include information about the code and 
 	```
 
 ## Data-Preprocessing for Training
-Add new data 
+The [official Kaldi's documentation] (https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. We need to keep data under asr-german/data/wav
 
-- Directory path of where subfolders named by speaker ids are located.
-- For example, given a corpus in the following directory: 
-
->	/kaldi/egs/asr-german/recipe_v2/,  
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ data;├─ cmd.sh
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp   └─ run.sh  
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ utils  
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ ...  
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ cmd.sh  
-	&nbsp;&nbsp;&nbsp;&nbsp;└─ run.sh  
- 
->	/kaldi/egs/asr-german/recipe_v2/,  
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ data
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ ...
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ local 
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ utils
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ steps
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ cmd.sh 
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ path.sh 
-	&nbsp;&nbsp;&nbsp;&nbsp;└─ run.sh
-
-These codes help data preparation for building an ASR system in Kaldi by creating the following text files within 'required' folder:
 - Files created:  
 	- text  
 	- utt2spk  
 	- segments  
 	- wav.scp  
+	
+## Training
+## Some Training Results
+## Running code at Case HPC
+
+## Acknowledgments
+* [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
+* [Red Hen Lab](http://www.redhenlab.org/)
+* [Kaldi](http://www.kaldi-asr.org)
+* [Kaldi Help Group](https://groups.google.com/forum/#!forum/kaldi-help)
+* [Singularity Help Group](https://groups.google.com/a/lbl.gov/forum/#!forum/singularity)
