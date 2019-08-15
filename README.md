@@ -123,7 +123,7 @@ This Readme will be updated regularly to include information about the code and 
 
 	```bash
 	$ cd ../src
-	$ sudo ./configure --use-cuda --cudatk-dir=/usr/local/cuda/ --cuda-arch=-arch=sm_70 --shared
+	$ sudo ./configure --use-cuda --cudatk-dir=/usr/local/cuda/ --cuda-arch=-arch=sm_70 --shared --static-math=yes --mathlib=OPENBLAS --openblas-root=/opt/openblas_st/
 	$ sudo extras/install_irstlm.sh
 	$ make -j clean depend `nproc`
 	$ make -j `nproc`
@@ -167,8 +167,10 @@ This Readme will be updated regularly to include information about the code and 
 	[Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server) is a real-time full-duplex speech recognition server, based on the Kaldi toolkit and the GStreamer framework and implemented in Python.
 	
 	```bash
-	$ sudo apt-get update
-	$ sudo apt-get -r requirements.txt 
+	$ wget http://github.com/xianyi/OpenBLAS/archive/v0.2.18.tar.gz
+	$ make BINARY=64 FC=gfortran USE_THREAD=0
+	$ sudo mkdir /opt/openblas_st
+	$ sudo make PREFIX=/opt/openblas_st install	
 	```
 
 ## Data-Preprocessing for Training
