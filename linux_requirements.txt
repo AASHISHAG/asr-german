@@ -30,3 +30,4 @@ gstreamer1.0-plugins-ugly
 gstreamer1.0-tools
 libgstreamer1.0-dev
 libjansson-dev
+python-gi
