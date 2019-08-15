@@ -161,7 +161,7 @@ Add new data
 
 >	/kaldi/egs/asr-german/recipe_v2/,  
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ data  &nbsp;├─ cmd.sh
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ local &nbsp;└─ run.sh  
+									 &nbsp;└─ run.sh  
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ utils  
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ ...  
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ cmd.sh  
