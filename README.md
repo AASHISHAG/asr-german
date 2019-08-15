@@ -169,7 +169,7 @@ Here are some of the results I obtained after training the model. The script [_r
 **Word Error Rate vs Training Stages**
 <p align="center"><img src="./images/training_graph.png" width='54%' height='60%'></p>
 
-**Percentage of Deletion, Insertion and Subsitution Error across different stages**
+**Percentage of Deletion, Insertion and Subsitution Error across different Training stages**
 <img align = "left" src="./images/error_graph-1.png" width='43%' height='45%'> <img float ="right" src="./images/error_graph-2.png" width='44%' height='45%'>
 	
 ## Running code at Case HPC
