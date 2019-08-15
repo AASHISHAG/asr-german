@@ -157,8 +157,17 @@ This Readme will be updated regularly to include information about the code and 
 Add new data 
 
 - Directory path of where subfolders named by speaker ids are located.
-- For example, given a corpus in the following directory:  
->	/kaldi/egs/asr-german/recipe_v2,  
+- For example, given a corpus in the following directory: 
+
+>	/Users/cho/mycorpus/,  
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ s01/  
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ s02/  
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ s03/  
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ ...  
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ s19/  
+	&nbsp;&nbsp;&nbsp;&nbsp;└─ s20/  
+ 
+>	/kaldi/egs/asr-german/recipe_v2/,  
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ data
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ ...
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ local 
