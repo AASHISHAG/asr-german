@@ -154,7 +154,7 @@ This Readme will be updated regularly to include information about the code and 
 	```
 
 ## Data-Preprocessing for Training
-The [official Kaldi's documentation] (https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. We need to keep data under asr-german/data/wav
+The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. We need to keep data under asr-german/data/wav
 
 - Files created:  
 	- text  
