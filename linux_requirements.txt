@@ -12,10 +12,8 @@ libpcre3
 libpcre3-dev
 gfortran
 build-essential
-automake
 git
 zlib1g-dev
-libtool
 subversion
 curl
 vim

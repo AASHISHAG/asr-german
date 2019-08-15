@@ -21,15 +21,14 @@ This Readme will be updated regularly to include information about the code and 
 
 * **Libraries**:
 
-	* [Git Large File Storage](https://git-lfs.github.com/)
-	* [Zlib1g-dev](https://packages.debian.org/stretch/zlib1g-dev)
-	* [Automake](https://packages.ubuntu.com/search?keywords=automake)
-	* [Autoconf](https://packages.ubuntu.com/search?keywords=autoconf)
-	* [Unzip](https://linux.die.net/man/1/unzip)
+	* [Automake](https://packages.ubuntu.com/xenial/automake)
+	* [Autoconf](https://packages.ubuntu.com/xenial/autoconf)
 	* [Sox](http://manpages.ubuntu.com/manpages/bionic/man1/sox.1.html)
-	* [Subversion](https://help.ubuntu.com/lts/serverguide/subversion.html)
 	* [Python](https://www.python.org/)	
-	* [Libpcre3](https://packages.debian.org/search?keywords=libpcre3/)
+	* [Libtool](https://www.gnu.org/software/libtool/)	
+	* [Gfortran](https://gcc.gnu.org/wiki/GFortran)	
+	* [Libgstreamer](https://packages.debian.org/sid/libgstreamer1.0-0)	
+
 
 * **Graphics Processing Unit (GPU)**:
 
@@ -49,6 +48,7 @@ This Readme will be updated regularly to include information about the code and 
 	* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
 	* [LXml](https://pypi.org/project/lxml/)
 	* [Requests](https://pypi.org/project/requests/)
+	* [Tornado](https://www.tornadoweb.org/en/stable/)
 	* [Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server)
 
 * **Singularity**:
@@ -103,6 +103,7 @@ This Readme will be updated regularly to include information about the code and 
 	$ cd asr-german
 	$ xargs -a linux_requirements.txt sudo apt-get install
 	$ pip3 install -r requirements.txt
+	$ pip install -r requirements.txt
 	```
 	
 	**_STEP 3:_**
