@@ -3,14 +3,7 @@
 # This script is adapted from swbd Kaldi run.sh (https://github.com/kaldi-asr/kaldi
 # Copyright 2019 Kaldi developers (see: https://github.com/kaldi-asr/kaldi/blob/master/COPYING)
 
-# Refer dependencies from Wall Street Journal Project (Steps and Utils)
-[ ! -L "steps" ] && ln -s ../../wsj/steps
-[ ! -L "utils" ] && ln -s ../../wsj/utils
-[ ! -L "rnnlm" ] && ln -s ../../../scripts/rnnlm/
-
-. utils/parse_options.sh
-. path.sh;
-
+# Setting data format to utf-8
 utf8()
 {
     iconv -f ISO-8859-1 -t UTF-8 $1 > $1.tmp
@@ -21,33 +14,37 @@ export LC_ALL=C
 export LANG=C
 export LANGUAGE=C
 
-extra_words_file=local/extra_words.txt
-extra_words_file=local/filtered_300k_vocab_de_wiki.txt
+# Refer dependencies from Wall Street Journal Project (Steps and Utils)
+[ ! -L "steps" ] && ln -s ../../wsj/steps
+[ ! -L "utils" ] && ln -s ../../wsj/utils
+[ ! -L "rnnlm" ] && ln -s ../../../scripts/rnnlm/
+
+# Loading path and other constants
+. cmd.sh;
+. path.sh
+. utils/parse_options.sh
+
+# Defining contants
+mfccdir=mfcc
 dict_suffix=_300k4
-dict_dir=data/local/dict${dict_suffix}
-local_lang_dir=data/local/lang${dict_suffix}
+FILTERBYNAME="*.xml"
 lang_dir=data/lang${dict_suffix}
-lang_dir_nosp=${lang_dir}_nosp${dict_suffix}
-format_lang_out_dir=${lang_dir}_test
-g2p_dir=data/local/g2p${dict_suffix}
+g2p_model=${g2p_dir}/de_g2p_model
+final_g2p_model=${g2p_model}-6
 lm_dir=data/local/lm${dict_suffix}
 arpa_lm=${lm_dir}/4gram-mincount/lm_pr10.0.gz
+g2p_dir=data/local/g2p${dict_suffix}
+format_lang_out_dir=${lang_dir}_test
+dict_dir=data/local/dict${dict_suffix}
+local_lang_dir=data/local/lang${dict_suffix}
+lang_dir_nosp=${lang_dir}_nosp${dict_suffix}
+extra_words_file=local/filtered_300k_vocab_de_wiki.txt
+RAWDATA=data/wav/german-speechdata-package-v2
 
-if [ -f cmd.sh ]; then
-      . cmd.sh; else
-         echo "missing cmd.sh"; exit 1;
-fi
-
-mfccdir=mfcc
-
-utf8()
-{
-    iconv -f ISO-8859-1 -t UTF-8 $1 > $1.tmp
-    mv $1.tmp $1
-}
-
+# Create Kaldi's directory structure
 python3 local/prepare_dir_structure.py
 
+# Download the data
 wget --directory-prefix=data/wav/ http://speech.tools/kaldi_tuda_de/german-speechdata-package-v2.tar.gz
 cd data/wav/
 tar xvfz german-speechdata-package-v2.tar.gz
@@ -69,40 +66,32 @@ wget --directory-prefix=data/wav/m_ailabs/ http://speech.tools/kaldi_tuda_de/m-a
 cd data/wav/m_ailabs/
 tar xvfz m-ailabs.bayern.de_DE.tgz
 cd ../../../
-
 python3 local/prepare_m-ailabs_data.py
 
-RAWDATA=data/wav/german-speechdata-package-v2
-
-FILTERBYNAME="*.xml"
-
+# Move files, which would later produce errors. They are saved in backup location
 python3 local/move_files_to_skip.py data/wav/german-speechdata-package-v2/train/
-
 find $RAWDATA/*/$FILTERBYNAME -type f > data/waveIDs.txt
 
+# Prepares directories in Kaldi's format
 python3 local/data_prepare.py -f data/waveIDs.txt --separate-mic-dirs
-
 local/get_utt2dur.sh data/tuda_train
 mv data/tuda_train data/train
 
-wget --directory-prefix=data/lexicon/https://raw.githubusercontent.com/marytts/marytts-lexicon-de/master/modules/de/lexicon/de.txt
+# Phoneme dictionary
+wget --directory-prefix=data/lexicon/ https://raw.githubusercontent.com/marytts/marytts-lexicon-de/master/modules/de/lexicon/de.txt
+echo "data/lexicon/de.txt">> data/lexicon_ids.txt
 
+# Transform phoneme dictionary
 mkdir -p ${dict_dir}/
 python3 local/build_big_lexicon.py -f data/lexicon_ids.txt -e data/local/combined.dict --export-dir ${dict_dir}/
 python3 local/export_lexicon.py -f data/local/combined.dict -o ${dict_dir}/_lexiconp.txt 
 
-g2p_model=${g2p_dir}/de_g2p_model
-final_g2p_model=${g2p_model}-6
-
+# Sequitur Grapheme-to-Phoneme (G2P)
 mkdir -p ${g2p_dir}/
-
 train_file=${g2p_dir}/lexicon.txt
-        
 cut -d" " -f 1,3- ${dict_dir}/_lexiconp.txt > $train_file
 cut -d" " -f 1 ${dict_dir}/_lexiconp.txt > ${g2p_dir}/lexicon_wordlist.txt
   
-mkdir -p ${g2p_dir}/
-
 $sequitur_g2p -e utf8 --train $train_file --devel 3% --write-model ${g2p_model}-1
 $sequitur_g2p -e utf8 --model ${g2p_model}-1 --ramp-up --train $train_file --devel 3% --write-model ${g2p_model}-2
 $sequitur_g2p -e utf8 --model ${g2p_model}-2 --ramp-up --train $train_file --devel 3% --write-model ${g2p_model}-3
@@ -111,61 +100,44 @@ $sequitur_g2p -e utf8 --model ${g2p_model}-4 --ramp-up --train $train_file --dev
 $sequitur_g2p -e utf8 --model ${g2p_model}-5 --ramp-up --train $train_file --devel 3% --write-model ${g2p_model}-6
 
 cp data/tuda_train/text ${g2p_dir}/complete_text
-
 cat data/swc_train/text >> ${g2p_dir}/complete_text
 cat data/m_ailabs_train/text >> ${g2p_dir}/complete_text
-
 gawk "{ printf(\"extra-word-%i %s\n\",NR,\$1) }" $extra_words_file | cat ${g2p_dir}/complete_text - > ${g2p_dir}/complete_text_new
 mv ${g2p_dir}/complete_text_new ${g2p_dir}/complete_text
-
 python3 local/find_oov.py -c ${g2p_dir}/complete_text -w ${g2p_dir}/lexicon_wordlist.txt -o ${g2p_dir}/oov.txt
 
 $sequitur_g2p -e utf8 --model $final_g2p_model --apply ${g2p_dir}/oov.txt > ${dict_dir}/oov_lexicon.txt
 cat ${dict_dir}/oov_lexicon.txt | gawk '{$1=$1" 1.0"; print }' > ${dict_dir}/_oov_lexiconp.txt
 gawk 'NF>=3' ${dict_dir}/_oov_lexiconp.txt > ${dict_dir}/oov_lexiconp.txt
-    
-if [ -f path.sh ]; then
-      . path.sh; else
-         echo "missing path.sh"; exit 1;
-fi
-
-export LC_ALL=C
-export LANG=C
-export LANGUAGE=C
 
 sort -u ${dict_dir}/_lexiconp.txt ${dict_dir}/oov_lexiconp.txt > ${dict_dir}/lexiconp.txt
-
 rm ${dict_dir}/lexicon.txt
-
 unixtime=$(date +%s)
 mkdir -p ${lang_dir}/old_$unixtime/
 mv ${lang_dir}/* ${lang_dir}/old_$unixtime/
-
 utils/prepare_lang.sh ${dict_dir} "<UNK>" ${local_lang_dir} ${lang_dir}
 
-mkdir -p ${lm_dir}/
 
+# Language Modelling
+mkdir -p ${lm_dir}/
 wget --directory-prefix=${lm_dir}/ http://speech.tools/kaldi_tuda_de/German_sentences_8mil_filtered_maryfied.txt.gz
 mv ${lm_dir}/German_sentences_8mil_filtered_maryfied.txt.gz ${lm_dir}/cleaned.gz
 
 local/build_lm.sh --srcdir ${local_lang_dir} --dir ${lm_dir}
 local/format_data.sh --arpa_lm $arpa_lm --lang_in_dir $lang_dir --lang_out_dir $format_lang_out_dir
 
-
+# MFCC
 rm data/swc_train/spk2utt
-      
 cat data/swc_train/segments | sort > data/swc_train/segments_sorted
 cat data/swc_train/text | sort | gawk 'NF>=2' > data/swc_train/text_sorted
 cat data/swc_train/utt2spk | sort > data/swc_train/utt2spk_sorted
 cat data/swc_train/wav.scp | sort > data/swc_train/wav.scp_sorted
-
 mv data/swc_train/wav.scp_sorted data/swc_train/wav.scp
 mv data/swc_train/utt2spk_sorted data/swc_train/utt2spk
 mv data/swc_train/text_sorted data/swc_train/text
 mv data/swc_train/segments_sorted data/swc_train/segments
-
 utils/utt2spk_to_spk2utt.pl data/swc_train/utt2spk > data/swc_train/spk2utt      
-
+     
 for x in swc_train tuda_train dev test; do
     utils/fix_data_dir.sh data/$x # some files fail to get mfcc for many reasons
     steps/make_mfcc.sh --cmd "$train_cmd" --nj $nJobs data/$x exp/make_mfcc/$x $mfccdir
@@ -175,14 +147,6 @@ for x in swc_train tuda_train dev test; do
 done
 
 combine_data.sh data/train data/tuda_train data/swc_train
-
-for x in train dev test; do
-    utils/fix_data_dir.sh data/$x # some files fail to get mfcc for many reasons
-    steps/make_mfcc.sh --cmd "$train_cmd" --nj $nJobs data/$x exp/make_mfcc/$x $mfccdir
-    utils/fix_data_dir.sh data/$x # some files fail to get mfcc for many reasons
-    steps/compute_cmvn_stats.sh data/$x exp/make_mfcc/$x $mfccdir
-    utils/fix_data_dir.sh data/$x
-done
 
 mv data/train data/train_without_mailabs 
 x=m_ailabs_train
@@ -194,8 +158,8 @@ utils/fix_data_dir.sh data/$x
 
 combine_data.sh data/train data/train_without_mailabs data/m_ailabs_train
 
+# Acoustic Modelling
 utils/subset_data_dir.sh --first data/train 4000 data/train_dev # 5hr 6min
-  
 if [ -f data/train/segments ]; then
   n=$[`cat data/train/segments | wc -l` - 4000]
 else
@@ -203,24 +167,19 @@ else
 fi
   
 utils/subset_data_dir.sh --last data/train $n data/train_nodev
-
 utils/subset_data_dir.sh --shortest data/train_nodev 150000 data/train_100kshort
 utils/subset_data_dir.sh data/train_100kshort 50000 data/train_30kshort
-
 utils/subset_data_dir.sh --first data/train_nodev 100000 data/train_100k
-
 utils/data/remove_dup_utts.sh 1000 data/train_100k data/train_100k_nodup
-
 utils/data/remove_dup_utts.sh 1000 data/train_nodev data/train_nodup
 
-if [ ! -d ${lang_dir_nosp} ]; then 
-  echo "Copying ${lang_dir} to ${lang_dir_nosp}..."
-  cp -R ${lang_dir} ${lang_dir_nosp}
-fi
+cp -R ${lang_dir} ${lang_dir_nosp}
 
+# Mono traning
 steps/train_mono.sh --nj $nJobs --cmd "$train_cmd" \
                     data/train_30kshort ${lang_dir_nosp} exp/mono
 
+# Triphone-1 traning				
 steps/align_si.sh --nj $nJobs --cmd "$train_cmd" \
                 data/train_100k_nodup ${lang_dir_nosp} exp/mono exp/mono_ali
 
@@ -230,18 +189,21 @@ steps/train_deltas.sh --cmd "$train_cmd" \
 graph_dir=exp/tri1/graph_nosp
 $train_cmd $graph_dir/mkgraph.log \
            utils/mkgraph.sh ${lang_dir}_test exp/tri1 $graph_dir
-    
+
 for dset in dev test; do
     steps/decode_si.sh --nj $nDecodeJobs --cmd "$decode_cmd" --config conf/decode.config \
                    $graph_dir data/${dset} exp/tri1/decode_${dset}_nosp
 done
-    
+
+# Triphone-2 traning				
 steps/align_si.sh --nj $nJobs --cmd "$train_cmd" \
                   data/train_100k_nodup ${lang_dir_nosp} exp/tri1 exp/tri1_ali
 
 steps/train_deltas.sh --cmd "$train_cmd" \
                       4000 70000 data/train_100k_nodup ${lang_dir_nosp} exp/tri1_ali exp/tri2
 
+while [ ! -s ${lang_dir_nosp}_sw1_tg/tmp/CLG_3_1.fst ]; do sleep 60; done
+sleep 20;
 graph_dir=exp/tri2/graph_nosp
 $train_cmd $graph_dir/mkgraph.log \
            utils/mkgraph.sh ${lang_dir}_test exp/tri2 $graph_dir
@@ -251,6 +213,8 @@ for dset in dev test; do
                 $graph_dir data/${dset} exp/tri2/decode_${dset}_nosp
 done
 
+
+# Triphone-3 traning				
 steps/align_si.sh --nj $nJobs --cmd "$train_cmd" \
                   data/train_100k_nodup ${lang_dir_nosp} exp/tri2 exp/tri2_ali_100k_nodup
 
@@ -269,24 +233,25 @@ for dset in dev test; do
                 $graph_dir data/${dset} exp/tri3/decode_${dset}_nosp
 done
 
+
 steps/get_prons.sh --cmd "$train_cmd" data/train_nodup ${lang_dir_nosp} exp/tri3
 utils/dict_dir_add_pronprobs.sh --max-normalize true \
                                 ${dict_dir} exp/tri3/pron_counts_nowb.txt exp/tri3/sil_counts_nowb.txt \
                                 exp/tri3/pron_bigram_counts_nowb.txt ${dict_dir}_pron
 
 utils/prepare_lang.sh ${dict_dir}_pron "<UNK>" ${local_lang_dir} ${lang_dir}
-
 ./local/format_data.sh --arpa_lm $arpa_lm --lang_in_dir $lang_dir --lang_out_dir ${lang_dir}_test_pron
 
 graph_dir=exp/tri3/graph_pron
 $train_cmd $graph_dir/mkgraph.log \
            utils/mkgraph.sh ${lang_dir}_test_pron exp/tri3 $graph_dir
-  
+
 for dset in dev test; do
     steps/decode.sh --nj $nDecodeJobs --cmd "$decode_cmd" --config conf/decode.config \
                 $graph_dir data/${dset} exp/tri3/decode_${dset}_pron
 done
 
+# Triphone-4 traning				
 steps/align_fmllr.sh --nj $nJobs --cmd "$train_cmd" \
                      data/train ${lang_dir}_test_pron exp/tri3 exp/tri3_ali
 
@@ -303,5 +268,6 @@ for dset in dev test; do
                     $graph_dir data/${dset} exp/tri4/decode_${dset}_pron
 done
 
+# TDNN training
 ./local/run_cleanup_segmentation.sh --langdir ${lang_dir}
 ./local/run_tdnn_1f.sh --lang_dir ${lang_dir}

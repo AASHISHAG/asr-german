@@ -2,7 +2,9 @@
 
 # Adapted from gale_arabic scripts
 
-# Script adapted from Language Technology, Technische Universitaet Darmstadt (author: Benjamin Milde)
+# Copyright 2018 Language Technology, Universitaet Hamburg (author: Benjamin Milde)
+# Copyright 2015 Language Technology, Technische Universitaet Darmstadt (author: Benjamin Milde)
+# Copyright 2014 QCRI (author: Ahmed Ali)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
