@@ -304,29 +304,30 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	
 ### Running the code
 	
-	* Run the server (_kaldi-gstreamer-server_)
+* Run the server (_kaldi-gstreamer-server_)
 	
 	``` bash
 	$ ./run-server.sh
 	```
 	
-	* Run the worker (_kaldi-gstreamer-server_)
+* Run the worker (_kaldi-gstreamer-server_)
 	
 	``` bash
 	$ ./run-worker.sh
 	```
 	
-	* Transcribe an audio clip (_kaldi-gstreamer-server_)
+* Transcribe an audio clip (_kaldi-gstreamer-server_)
 	
 	``` bash
 	$ ./run-model.sh $path_to_audio
 	```
 	
-	* Transcribe Red Hen News dataset
+* Transcribe Red Hen News dataset
 	
 	``` bash
 	$ ./kaldi_de.slurm $_specify number of days from the current date the model should transcribe_
 	```
+
 	*_EXAMPLE_*: 
 	
 	./kaldi_de.slurm _if model should transcribe todays news_
