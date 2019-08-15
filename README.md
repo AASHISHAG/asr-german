@@ -333,6 +333,8 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	./kaldi_de.slurm (_if model should transcribe todays news_)
 	
 	./kaldi_de.slurm 1 (_if model should transcribe yesterdays news_)
+	
+	./kaldi_de.slurm 2 (_if model should transcribe day before yesterdays news_)
 
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
