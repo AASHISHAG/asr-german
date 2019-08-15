@@ -37,7 +37,7 @@ This Readme will be updated regularly to include information about the code and 
 
 * **SWIG**:
 
-	* [Swig](http://www.swig.org/)
+	* [Swig](https://github.com/swig/swig)
 	
 * **Grapheme-to-Phoneme**:
 
@@ -133,7 +133,8 @@ This Readme will be updated regularly to include information about the code and 
 	The entire process can take **_3-4 hours_**, depending on the server configurations.
 	
 * **Swig**:	
-
+    SWIG is a compiler that integrates C and C++ with languages including Perl, Python, Tcl, Ruby, PHP, Java, C#, D, Go, Lua, Octave, R, Scheme (Guile, MzScheme/Racket), Scilab, Ocaml. SWIG can also export its parse tree into XML.
+	
 	```bash
 	$ wget https://netix.dl.sourceforge.net/project/swig/swig/swig-4.0.0/swig-4.0.0.tar.gz
 	$ chmod 777 swig-4.0.0.tar.gz
@@ -151,11 +152,21 @@ This Readme will be updated regularly to include information about the code and 
 	```
 	
 * **Sequitur-G2P**:
+	Sequitur G2P is a trainable data-driven Grapheme-to-Phoneme converter.
 	
 	```bash
 	$ git clone https://github.com/sequitur-g2p/sequitur-g2p.git
 	$ pip3 install git+https://github.com/sequitur-g2p/sequitur-g2p@master
 	$ make -j `nproc`
+	```
+
+* **Kaldi Gstreamer Server**:
+	
+	[Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server) is a real-time full-duplex speech recognition server, based on the Kaldi toolkit and the GStreamer framework and implemented in Python.
+	
+	```bash
+	$ sudo apt-get update
+	$ sudo apt-get -r requirements.txt 
 	```
 
 ## Data-Preprocessing for Training
@@ -240,16 +251,6 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	
 ## Running code at Case HPC
 
-### Prerequisites
-
-* **Kaldi Gstreamer Server**:
-	
-	[Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server) is a real-time full-duplex speech recognition server, based on the Kaldi toolkit and the GStreamer framework and implemented in Python.
-	
-	```bash
-	$ sudo apt-get update
-	$ sudo apt-get -r requirements.txt 
-	```
 
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)

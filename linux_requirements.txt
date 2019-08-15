@@ -10,3 +10,15 @@ python2.7
 python3=3.5.2
 libpcre3
 libpcre3-dev
+gfortran
+build-essential
+automake
+git
+zlib1g-dev
+libtool
+subversion
+curl
+vim
+python-pip
+python-pip3
+screen
