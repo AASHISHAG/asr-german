@@ -173,7 +173,7 @@ Here are some of the results I obtained after training the model. The script [_r
 <img align = "left" src="./images/error_graph-1.png" width='43%' height='45%'> <img float ="right" src="./images/error_graph-2.png" width='44%' height='45%'>
 
 <audio controls>
-  <source src="/audios/de_1.wav" type="audio/wav">
+  <source src="./audios/de_1.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -182,7 +182,7 @@ $ Garrett erinnerte sich daran dass er einst einen Eid geschworen hatte
 ```
 
 <audio controls>
-  <source src="/audios/de_2.wav" type="audio/wav">
+  <source src="./audios/de_2.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -191,7 +191,7 @@ $ Weil man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
 ```
 
 <audio controls>
-  <source src="/audios/de_3.wav" type="audio/wav">
+  <source src="./audios/de_3.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -200,7 +200,7 @@ $ Valentin hat das Handtuch geworfen
 ```
 
 <audio controls>
-  <source src="/audios/de_4.wav" type="audio/wav">
+  <source src="./audios/de_4.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -209,7 +209,7 @@ $ Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
 ```
 
 <audio controls>
-  <source src="/audios/de_5.wav" type="audio/wav">
+  <source src="./audios/de_5.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -218,7 +218,7 @@ $ Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
 ```
 
 <audio controls>
-  <source src="/audios/de_6.wav" type="audio/wav">
+  <source src="./audios/de_6.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -227,7 +227,7 @@ $ Man sollte den Länderfinanzausgleich durch ein Bundesliga Soli ersetzen
 ```
 
 <audio controls>
-  <source src="/audios/de_7.wav" type="audio/wav">
+  <source src="./audios/de_7.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -236,7 +236,7 @@ $ Von Salzburg ist es doch nicht weit Bistum Chiemsee
 ```
 
 <audio controls>
-  <source src="/audios/de_8.wav" type="audio/wav">
+  <source src="./audios/de_8.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -245,7 +245,7 @@ $ Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige raus Feder
 ```
 
 <audio controls>
-  <source src="/audios/de_9.wav" type="audio/wav">
+  <source src="./audios/de_9.wav" type="audio/wav">
 </audio>
 
 ``` bash
@@ -254,7 +254,7 @@ $ Folgende Lektüre kann ich ihn zum Thema Kognitionspsychologie empfehlen
 ``` 
 
 <audio controls>
-  <source src="/audios/de_10.wav" type="audio/wav">
+  <source src="./audios/de_10.wav" type="audio/wav">
 </audio>
 
 ``` bash
