@@ -35,13 +35,6 @@ This Readme will be updated regularly to include information about the code and 
 
 	* [Cuda](https://developer.nvidia.com/cuda-zone)
 
-* **Kaldi**:
-
-	* [Numpy](https://www.numpy.org/)
-	* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
-	* [LXml](https://pypi.org/project/lxml/)
-	* [Requests](https://pypi.org/project/requests/)
-	
 * **SWIG**:
 
 	* [Swig](http://www.swig.org/)
@@ -50,6 +43,18 @@ This Readme will be updated regularly to include information about the code and 
 
 	* [Sequitur-G2P](https://github.com/sequitur-g2p/sequitur-g2p)
 
+* **Kaldi**:
+
+	* [Numpy](https://www.numpy.org/)
+	* [Beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
+	* [LXml](https://pypi.org/project/lxml/)
+	* [Requests](https://pypi.org/project/requests/)
+	* [Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server)
+
+* **Singularity**:
+
+	* [Singularity](https://singularity.lbl.gov/)
+	
 ### Installation
 
 * **Libraries**:
