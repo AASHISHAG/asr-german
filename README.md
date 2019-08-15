@@ -201,11 +201,12 @@ This Readme will be updated regularly to include information about the code and 
 	$ cp ../../egs/asr-german/kaldi-de.yaml .
 	```
 	**_NOTE:_** Specify the path of _final.mdl_, _mfcc.conf_, _HCLG.fst_ and _words.txt_ in _kaldi-de.yaml_ (after training).
-	In general, it would be:
-	_./exp/nnet3_cleaned/tri5/final.mdl
-	./conf/mfcc.conf
-	./exp/chain_cleaned/tdnn1f_2048_sp_bi/graph/HCLG.fst
-	./exp/chain_cleaned/tdnn1f_2048_sp_bi/graph/words.txt_
+	
+	In general, these would be at:
+	_./exp/nnet3_cleaned/tri5/final.mdl_
+	_./conf/mfcc.conf_
+	_./exp/chain_cleaned/tdnn1f_2048_sp_bi/graph/HCLG.fst_
+	_./exp/chain_cleaned/tdnn1f_2048_sp_bi/graph/words.txt_
 
 ## Data-Preprocessing for Training
 The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. We need to keep data under asr-german/data/wav
