@@ -168,7 +168,7 @@ Here are some of the results I obtained after training the model. The script [_r
 
 <p align="center"><img src="./images/training_graph.png" width='58%' height='60%'></p>
 
-<img align = "left" src="./images/error_graph-1.png" width='43%' height='45%'> <img float ="right" src="./images/error_graph-2.png" width='48%' height='50%'>
+<img align = "left" src="./images/error_graph-1.png" width='43%' height='45%'> <img float ="right" src="./images/error_graph-2.png" width='44%' height='45%'>
 	
 ## Running code at Case HPC
 
