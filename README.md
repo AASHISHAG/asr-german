@@ -143,11 +143,18 @@ This Readme will be updated regularly to include information about the code and 
 	**_STEP 6:_**
 
 	```bash
-	$ cd ../../tools
+	$ export KALDI_ROOT= <path to KALDI_ROOT>
+	$ cd $KALDI_ROOT/tools/
 	$ git clone https://github.com/alumae/gst-kaldi-nnet2-online
 	$ cd gst-kaldi-nnet2-online/src
 	$ make -j clean depend `nproc`
 	$ make -j `nproc`
+	```
+	
+	*_You can now test if the GST-Kaldi-NNET2-Online installation works:_*
+	
+	```bash
+	$ GST_PLUGIN_PATH=$KALDI_ROOT/tools/gst-kaldi-nnet2-online/src gst-inspect-1.0 kaldinnet2onlinedecoder
 	```
 	
 	**_NOTE_**:
