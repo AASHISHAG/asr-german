@@ -186,8 +186,8 @@ $ Output: Weil man schnell fährt ist man von Emden nach Landshut nicht lange un
 
 **[DE_03](https://aashishag.github.io/others/de_3.wav)**
 ``` bash
-$ _Actual_: Valentin hat das Handtuch geworfen
-$ **Output**: Valentin hat das Handtuch geworfen
+$ Actual: Valentin hat das Handtuch geworfen
+$ Output: Valentin hat das Handtuch geworfen
 ```
 
 **[DE_04](https://aashishag.github.io/others/de_4.wav)**
