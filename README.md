@@ -29,6 +29,7 @@ This Readme will be updated regularly to include information about the code and 
 	* [Sox](http://manpages.ubuntu.com/manpages/bionic/man1/sox.1.html)
 	* [Subversion](https://help.ubuntu.com/lts/serverguide/subversion.html)
 	* [Python](https://www.python.org/)	
+	* [Libpcre3](https://packages.debian.org/search?keywords=libpcre3/)
 
 * **Graphics Processing Unit (GPU)**:
 
@@ -73,6 +74,8 @@ This Readme will be updated regularly to include information about the code and 
 	$ sudo apt-get update
 	$ sudo apt-get install cuda
 	```
+	
+	The the above installation is for _Ubuntu 16.04_. Refer below links for other versions.
 	
 	* [_Cuda-Installation-Guide-Linux_](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
 	
