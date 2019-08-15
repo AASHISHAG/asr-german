@@ -294,6 +294,31 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	
 ## Running code at Case HPC
 
+### Prerequisites
+
+* Copy project's code in your directory.
+
+	``` bash
+	$ cp -r /mnt/rds/redhen/gallina/home/axa1142/ ./new-directory
+	```
+	
+### Running the code
+	
+	``` bash
+	$ ./run-server.sh
+	```
+	
+	``` bash
+	$ ./run-worker.sh
+	```
+	
+	``` bash
+	$ ./run-model.sh $path_to_audio
+	```
+	
+	``` bash
+	$ ./kaldi_de.slurm
+	```
 
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
