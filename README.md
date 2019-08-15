@@ -296,7 +296,7 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 
 ### Prerequisites
 
-	* Copy project's code in your directory.
+* Copy project's code in your directory.
 
 	``` bash
 	$ cp -r /mnt/rds/redhen/gallina/home/axa1142/ ./new-directory
@@ -330,8 +330,9 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 
 	*_EXAMPLE_*: 
 	
-	./kaldi_de.slurm _if model should transcribe todays news_
-	./kaldi_de.slurm 1 _if model should transcribe yesterdays news_
+	./kaldi_de.slurm (_if model should transcribe todays news_)
+	
+	./kaldi_de.slurm 1 (_if model should transcribe yesterdays news_)
 
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
