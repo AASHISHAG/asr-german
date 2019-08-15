@@ -133,6 +133,7 @@ This Readme will be updated regularly to include information about the code and 
 	The entire process can take **_3-4 hours_**, depending on the server configurations.
 	
 * **Swig**:	
+
     SWIG is a compiler that integrates C and C++ with languages including Perl, Python, Tcl, Ruby, PHP, Java, C#, D, Go, Lua, Octave, R, Scheme (Guile, MzScheme/Racket), Scilab, Ocaml. SWIG can also export its parse tree into XML.
 	
 	```bash
@@ -152,6 +153,7 @@ This Readme will be updated regularly to include information about the code and 
 	```
 	
 * **Sequitur-G2P**:
+
 	Sequitur G2P is a trainable data-driven Grapheme-to-Phoneme converter.
 	
 	```bash
