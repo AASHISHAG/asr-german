@@ -195,10 +195,8 @@ This Readme will be updated regularly to include information about the code and 
 	[Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server) is a real-time full-duplex speech recognition server, based on the Kaldi toolkit and the GStreamer framework and implemented in Python.
 	
 	```bash
-	$ wget http://github.com/xianyi/OpenBLAS/archive/v0.2.18.tar.gz
-	$ make BINARY=64 FC=gfortran USE_THREAD=0
-	$ sudo mkdir /opt/openblas_st
-	$ sudo make PREFIX=/opt/openblas_st install	
+	$ cd $KALDI_ROOT/tools/
+	$ git clone https://github.com/alumae/kaldi-gstreamer-server	
 	```
 
 ## Data-Preprocessing for Training

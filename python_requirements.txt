@@ -2,3 +2,6 @@ numpy
 beautifulsoup4
 lxml
 requests
+ws4py==0.3.2
+pyyaml
+tornado
