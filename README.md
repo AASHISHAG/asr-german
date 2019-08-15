@@ -86,23 +86,24 @@ This Readme will be updated regularly to include information about the code and 
 	**._STEP 1:_**
 
 	```bash
-	$ git clone https://github.com/AASHISHAG/asr-german.git
-	$ cd asr-german
-	$ pip3 install -r requirements.txt
-	$ cd ..
+	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
+	$ cd kaldi-trunk
 	```
 	
 	**_STEP 2:_**
 
 	```bash
-	$ git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden
-	$ cd kaldi-trunk
+	$ cd egs
+	$ git clone https://github.com/AASHISHAG/asr-german.git
+	$ cd asr-german
+	$ xargs -a linux_requirements.txt sudo apt-get install
+	$ pip3 install -r requirements.txt
 	```
 	
 	**_STEP 3:_**
 
 	```bash
-	$ cd tools
+	$ cd ../../tools
 	$ sudo extras/install_mkl.sh
 	$ sudo extras/install_irstlm.sh
 	$ sudo extras/check_dependencies.sh
