@@ -202,10 +202,14 @@ This Readme will be updated regularly to include information about the code and 
 	```
 	**_NOTE:_** Specify the path of _final.mdl_, _mfcc.conf_, _HCLG.fst_ and _words.txt_ in _kaldi-de.yaml_ (after training).
 	
-	In general, these would be at:
+	In general, these would be at the following path:
+	
 	_./exp/nnet3_cleaned/tri5/final.mdl_
+	
 	_./conf/mfcc.conf_
+	
 	_./exp/chain_cleaned/tdnn1f_2048_sp_bi/graph/HCLG.fst_
+	
 	_./exp/chain_cleaned/tdnn1f_2048_sp_bi/graph/words.txt_
 
 ## Data-Preprocessing for Training
