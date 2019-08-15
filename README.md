@@ -328,7 +328,7 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	$ ./kaldi_de.slurm $_specify number of days from the current date the model should transcribe_
 	```
 
-	*_EXAMPLE_*: 
+	**_EXAMPLE:_** 
 	
 	./kaldi_de.slurm (_if model should transcribe todays news_)
 	
