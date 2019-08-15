@@ -172,7 +172,7 @@ Here are some of the results I obtained after training the model. The script [_r
 **Percentage of _Deletion_, _Insertion_ and _Subsitution Error_ across different Training Stages**
 <img align = "left" src="./images/error_graph-1.png" width='43%' height='45%'> <img float ="right" src="./images/error_graph-2.png" width='44%' height='45%'>
 
-*[DE_01](https://aashishag.github.io/others/de_1.wav)*
+**[DE_01](https://aashishag.github.io/others/de_1.wav)**
 ``` bash
 $ Actual: Gerrit erinnerte sich daran dass er einst einen Eid geschworen hatte
 $ Output: Garrett erinnerte sich daran dass er einst einen Eid geschworen hatte
@@ -186,8 +186,8 @@ $ Output: Weil man schnell fährt ist man von Emden nach Landshut nicht lange un
 
 **[DE_03](https://aashishag.github.io/others/de_3.wav)**
 ``` bash
-$ Actual: Valentin hat das Handtuch geworfen
-$ Output: Valentin hat das Handtuch geworfen
+$ _Actual_: Valentin hat das Handtuch geworfen
+$ **Output**: Valentin hat das Handtuch geworfen
 ```
 
 **[DE_04](https://aashishag.github.io/others/de_4.wav)**
