@@ -164,6 +164,12 @@ The [official Kaldi's documentation] (https://kaldi-asr.org/doc/data_prep.html) 
 	
 ## Training
 ## Some Training Results
+Here are some of the results I obtained after training the model. The script [_recipe_v2/show_results.sh_](./recipe_v2/show_results.sh) was used to get these results.
+
+	<p align="center"><img src="./images/training_graph.png" width='48%' height='50%'></p>
+
+	<img align = "left" src="./images/error_graph-1.png" width='48%' height='50%'> <img float ="right" src="./images/error_graph-2.png" width='48%' height='50%'>
+	
 ## Running code at Case HPC
 
 ## Acknowledgments
