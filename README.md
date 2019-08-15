@@ -319,13 +319,13 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 * Transcribe an audio clip (_kaldi-gstreamer-server_)
 	
 	``` bash
-	$ ./run-model.sh $path_to_audio
+	$ ./run-model.sh path_to_audio
 	```
 	
 * Transcribe Red Hen News dataset
 	
 	``` bash
-	$ ./kaldi_de.slurm $_specify number of days from the current date the model should transcribe_
+	$ ./kaldi_de.slurm specify number of days from the current date the model should transcribe
 	```
 
 	**_EXAMPLE:_** 
