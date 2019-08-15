@@ -200,7 +200,7 @@ This Readme will be updated regularly to include information about the code and 
 	$ cd kaldi-gstreamer-server
 	$ cp ../../egs/asr-german/kaldi-de.yaml .
 	```
-	**NOTE:** Specify the path of _final.mdl_, _mfcc.conf_, _HCLG.fst_ and _words.txt_ in kaldi-de.yaml (after training).
+	**_NOTE:_** Specify the path of _final.mdl_, _mfcc.conf_, _HCLG.fst_ and _words.txt_ in _kaldi-de.yaml_ (after training).
 
 ## Data-Preprocessing for Training
 The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. We need to keep data under asr-german/data/wav
