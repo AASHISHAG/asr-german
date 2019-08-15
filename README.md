@@ -172,52 +172,61 @@ Here are some of the results I obtained after training the model. The script [_r
 **Percentage of _Deletion_, _Insertion_ and _Subsitution Error_ across different Training Stages**
 <img align = "left" src="./images/error_graph-1.png" width='43%' height='45%'> <img float ="right" src="./images/error_graph-2.png" width='44%' height='45%'>
 
-**[DE_01](https://aashishag.github.io/others/de_2.wav)**
+*[DE_01](https://aashishag.github.io/others/de_1.wav)*
 ``` bash
 $ Actual: Gerrit erinnerte sich daran dass er einst einen Eid geschworen hatte
 $ Output: Garrett erinnerte sich daran dass er einst einen Eid geschworen hatte
 ```
 
+**[DE_02](https://aashishag.github.io/others/de_2.wav)**
 ``` bash
 $ Actual: Wenn man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
 $ Output: Weil man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
 ```
 
+**[DE_03](https://aashishag.github.io/others/de_3.wav)**
 ``` bash
 $ Actual: Valentin hat das Handtuch geworfen
 $ Output: Valentin hat das Handtuch geworfen
 ```
 
+**[DE_04](https://aashishag.github.io/others/de_4.wav)**
 ``` bash
 $ Actual: Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
 $ Output: Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
 ```
 
+**[DE_05](https://aashishag.github.io/others/de_5.wav)**
 ``` bash
 $ Actual: Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
 $ Output: Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
 ```
 
+**[DE_06](https://aashishag.github.io/others/de_6.wav)**
 ``` bash
 $ Actual: Man sollte den Länderfinanzausgleich durch einen Bundesligasoli ersetzen
 $ Output: Man sollte den Länderfinanzausgleich durch ein Bundesliga Soli ersetzen
 ```
 
+**[DE_07](https://aashishag.github.io/others/de_7.wav)**
 ``` bash
 $ Actual: Von Salzburg ist es doch nicht weit bis zum Chiemsee
 $ Output: Von Salzburg ist es doch nicht weit Bistum Chiemsee
 ```
 
+**[DE_08](https://aashishag.github.io/others/de_8.wav)**
 ``` bash
 $ Actual: Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige Herausforderung
 $ Output: Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige raus Federung
 ```
 
+**[DE_09](https://aashishag.github.io/others/de_9.wav)**
 ``` bash
 $ Actual: Folgende Lektüre kann ich ihnen zum Thema Kognitionspsychologie empfehlen
 $ Output: Folgende Lektüre kann ich ihn zum Thema Kognitionspsychologie empfehlen
 ``` 
 
+**[DE_10](https://aashishag.github.io/others/de_10.wav)**
 ``` bash
 $ Actual: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
