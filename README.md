@@ -139,6 +139,16 @@ This Readme will be updated regularly to include information about the code and 
 	$ make -j clean depend `nproc`
 	$ make -j `nproc`
 	```
+
+	**_STEP 6:_**
+
+	```bash
+	$ cd ../../tools
+	$ git clone https://github.com/alumae/gst-kaldi-nnet2-online
+	$ cd gst-kaldi-nnet2-online/src
+	$ make -j clean depend `nproc`
+	$ make -j `nproc`
+	```
 	
 	**_NOTE_**:
 	The entire process can take **_4-5 hours_**, depending on the server configurations.
