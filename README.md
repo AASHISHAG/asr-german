@@ -223,6 +223,8 @@ The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) i
 	
 ## Training
 
+* Run
+
 	``` bash
 	$ cd kaldi/egs/asr-german/recipe_v2
 	$ ./run.sh
