@@ -172,94 +172,54 @@ Here are some of the results I obtained after training the model. The script [_r
 **Percentage of _Deletion_, _Insertion_ and _Subsitution Error_ across different Training Stages**
 <img align = "left" src="./images/error_graph-1.png" width='43%' height='45%'> <img float ="right" src="./images/error_graph-2.png" width='44%' height='45%'>
 
-<audio controls>
-  <source src="./audios/de_1.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Gerrit erinnerte sich daran dass er einst einen Eid geschworen hatte
-$ Garrett erinnerte sich daran dass er einst einen Eid geschworen hatte
+$ Actual: Gerrit erinnerte sich daran dass er einst einen Eid geschworen hatte
+$ Output: Garrett erinnerte sich daran dass er einst einen Eid geschworen hatte
 ```
 
-<audio controls>
-  <source src="./audios/de_2.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Wenn man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
-$ Weil man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
+$ Actual: Wenn man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
+$ Output: Weil man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
 ```
 
-<audio controls>
-  <source src="./audios/de_3.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Valentin hat das Handtuch geworfen
-$ Valentin hat das Handtuch geworfen
+$ Actual: Valentin hat das Handtuch geworfen
+$ Output: Valentin hat das Handtuch geworfen
 ```
 
-<audio controls>
-  <source src="./audios/de_4.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
-$ Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
+$ Actual: Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
+$ Output: Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
 ```
 
-<audio controls>
-  <source src="./audios/de_5.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
-$ Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
+$ Actual: Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
+$ Output: Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
 ```
 
-<audio controls>
-  <source src="./audios/de_6.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Man sollte den Länderfinanzausgleich durch einen Bundesligasoli ersetzen
-$ Man sollte den Länderfinanzausgleich durch ein Bundesliga Soli ersetzen
+$ Actual: Man sollte den Länderfinanzausgleich durch einen Bundesligasoli ersetzen
+$ Output: Man sollte den Länderfinanzausgleich durch ein Bundesliga Soli ersetzen
 ```
 
-<audio controls>
-  <source src="./audios/de_7.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Von Salzburg ist es doch nicht weit bis zum Chiemsee
-$ Von Salzburg ist es doch nicht weit Bistum Chiemsee
+$ Actual: Von Salzburg ist es doch nicht weit bis zum Chiemsee
+$ Output: Von Salzburg ist es doch nicht weit Bistum Chiemsee
 ```
 
-<audio controls>
-  <source src="./audios/de_8.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige Herausforderung
-$ Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige raus Federung
+$ Actual: Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige Herausforderung
+$ Output: Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige raus Federung
 ```
 
-<audio controls>
-  <source src="./audios/de_9.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Folgende Lektüre kann ich ihnen zum Thema Kognitionspsychologie empfehlen
-$ Folgende Lektüre kann ich ihn zum Thema Kognitionspsychologie empfehlen
+$ Actual: Folgende Lektüre kann ich ihnen zum Thema Kognitionspsychologie empfehlen
+$ Output: Folgende Lektüre kann ich ihn zum Thema Kognitionspsychologie empfehlen
 ``` 
 
-<audio controls>
-  <source src="./audios/de_10.wav" type="audio/wav">
-</audio>
-
 ``` bash
-$ Warum werden da keine strafrechtlichen Konsequenzen gezogen
-$ Warum werden da keine strafrechtlichen Konsequenzen gezogen
+$ Actual: Warum werden da keine strafrechtlichen Konsequenzen gezogen
+$ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 ```
 
 	
