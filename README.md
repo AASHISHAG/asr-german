@@ -122,7 +122,18 @@ This Readme will be updated regularly to include information about the code and 
 	**_STEP 4:_**
 
 	```bash
-	$ cd ../src
+	$ wget http://github.com/xianyi/OpenBLAS/archive/v0.2.18.tar.gz
+	$ tar -xzvf v0.2.18.tar.gz
+	$ cd OpenBLAS-0.2.18
+	$ make BINARY=64 FC=gfortran USE_THREAD=0
+	$ sudo mkdir /opt/openblas_st
+	$ sudo make PREFIX=/opt/openblas_st install	
+	```
+	
+	**_STEP 5:_**
+
+	```bash
+	$ cd ../../src
 	$ sudo ./configure --use-cuda --cudatk-dir=/usr/local/cuda/ --cuda-arch=-arch=sm_70 --shared --static-math=yes --mathlib=OPENBLAS --openblas-root=/opt/openblas_st/
 	$ sudo extras/install_irstlm.sh
 	$ make -j clean depend `nproc`
@@ -130,7 +141,7 @@ This Readme will be updated regularly to include information about the code and 
 	```
 	
 	**_NOTE_**:
-	The entire process can take **_3-4 hours_**, depending on the server configurations.
+	The entire process can take **_4-5 hours_**, depending on the server configurations.
 	
 * **Swig**:	
 
