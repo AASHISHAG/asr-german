@@ -240,6 +240,17 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	
 ## Running code at Case HPC
 
+### Prerequisites
+
+* **[Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server)**:
+	
+	Kaldi Gstreamer Server is a real-time full-duplex speech recognition server, based on the Kaldi toolkit and the GStreamer framework and implemented in Python.
+	
+	```bash
+	$ sudo apt-get update
+	$ sudo apt-get -r requirements.txt 
+	```
+
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
 * [Red Hen Lab](http://www.redhenlab.org/)
