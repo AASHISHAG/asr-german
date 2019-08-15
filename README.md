@@ -154,3 +154,29 @@ This Readme will be updated regularly to include information about the code and 
 	```
 
 ## Data-Preprocessing for Training
+Add new data 
+
+- Directory path of where subfolders named by speaker ids are located.
+- For example, given a corpus in the following directory:  
+>	/kaldi/egs/asr-german/recipe_v2,  
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ data   ├─train  ├─ text
+											   ├─ wav.scp
+											   ├─ utt2spk
+											   ├─ spk2gender
+									  ├─test
+									  ├─dev
+									  
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ exp    ├─
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ local  ├─
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ utils  ├─
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ steps  ├─
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ cmd.sh ├─ 
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ path.sh├─ 
+	&nbsp;&nbsp;&nbsp;&nbsp;└─ run.sh ├─
+
+These codes help data preparation for building an ASR system in Kaldi by creating the following text files within 'required' folder:
+- Files created:  
+	- text  
+	- utt2spk  
+	- segments  
+	- wav.scp  
