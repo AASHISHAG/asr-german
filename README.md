@@ -159,12 +159,9 @@ Add new data
 - Directory path of where subfolders named by speaker ids are located.
 - For example, given a corpus in the following directory:  
 >	/kaldi/egs/asr-german/recipe_v2,  
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ data   ├─train  ├─ text
-											   ├─ wav.scp
-											   ├─ utt2spk
-											   ├─ spk2gender
-									  ├─test
-									  ├─dev
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ data├─train
+								   ├─test
+								   ├─dev
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ ...
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ local 
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ utils
