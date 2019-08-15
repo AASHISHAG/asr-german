@@ -166,12 +166,12 @@ Add new data
 									  ├─test
 									  ├─dev
 	&nbsp;&nbsp;&nbsp;&nbsp;├─ exp
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ local  ├─
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ utils  ├─
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ steps  ├─
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ cmd.sh ├─ 
-	&nbsp;&nbsp;&nbsp;&nbsp;├─ path.sh├─ 
-	&nbsp;&nbsp;&nbsp;&nbsp;└─ run.sh ├─
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ local 
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ utils
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ steps
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ cmd.sh 
+	&nbsp;&nbsp;&nbsp;&nbsp;├─ path.sh 
+	&nbsp;&nbsp;&nbsp;&nbsp;└─ run.sh
 
 These codes help data preparation for building an ASR system in Kaldi by creating the following text files within 'required' folder:
 - Files created:  
