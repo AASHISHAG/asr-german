@@ -242,9 +242,9 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 
 ### Prerequisites
 
-* **[Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server)**:
+* **Kaldi Gstreamer Server**:
 	
-	Kaldi Gstreamer Server is a real-time full-duplex speech recognition server, based on the Kaldi toolkit and the GStreamer framework and implemented in Python.
+	[Kaldi Gstreamer Server](https://github.com/alumae/kaldi-gstreamer-server) is a real-time full-duplex speech recognition server, based on the Kaldi toolkit and the GStreamer framework and implemented in Python.
 	
 	```bash
 	$ sudo apt-get update
