@@ -232,6 +232,7 @@ The respective scripts for data preprocessing can be added at [_run.sh_](recipe_
 Each data clip should contain information regarding the specifics of the audio files, transcripts, and speakers. Specifically, it will contain the following files:
 
  - text
+ 
    The text file is essentially the utterance-by-utterance transcript of the corpus. This is a text file with the following format:
 	
    ``` bash
@@ -240,15 +241,16 @@ Each data clip should contain information regarding the specifics of the audio f
    
    utt_id = utterance ID
 
-Example text file:
-``` bash
-110236_20091006_82330_F_0001 I’M WORRIED ABOUT THAT
-110236_20091006_82330_F_0002 AT LEAST NOW WE HAVE THE BENEFIT
-110236_20091006_82330_F_0003 DID YOU EVER GO ON STRIKE
-…
-120958_20100126_97016_M_0285 SOMETIMES LESS IS BETTER
-120958_20100126_97016_M_0286 YOU MUST LOVE TO COOK
-```
+   Example text file:
+
+   ``` bash
+   110236_20091006_82330_F_0001 I’M WORRIED ABOUT THAT
+   110236_20091006_82330_F_0002 AT LEAST NOW WE HAVE THE BENEFIT
+   110236_20091006_82330_F_0003 DID YOU EVER GO ON STRIKE
+    …
+   120958_20100126_97016_M_0285 SOMETIMES LESS IS BETTER
+   120958_20100126_97016_M_0286 YOU MUST LOVE TO COOK
+  ```
 
  - segments
  - wav.scp
