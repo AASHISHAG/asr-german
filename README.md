@@ -61,8 +61,10 @@ This Readme will be updated regularly to include information about the code and 
 	
 	```bash
 	$ sudo apt-get update
-	$ sudo apt-get -r requirements.txt 
 	```
+	
+	**_NOTE_**:
+	_The other important libraries are downloaded in the later steps._
 	
 * **Graphics Processing Unit (GPU)**:
 
