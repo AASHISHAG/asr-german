@@ -358,14 +358,14 @@ Preprocess data so that each clip contains information regarding the specifics o
 	
 ## Training
 
-According to server configurations change the number of jobs at [cmd.sh](recipe_v2/cmd.sh)
+According to the server configurations change the number of jobs at [cmd.sh](recipe_v2/cmd.sh)
 
    ``` bash
    export nJobs=28
    export nDecodeJobs=12
    ```
 
-According to server configurations change the number of jobs at [cmd.sh](recipe_v2/cmd.sh)
+Finally run the model on training.
    
    ``` bash
    $ cd $KALDI_ROOT/egs/asr-german/recipe_v2
