@@ -535,6 +535,7 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 ## Blog
 
 Link to the Blog: https://aashishag.github.io/blog/
+
 Link to the Website: https://aashishag.github.io/asr-german/
 
 ## Acknowledgments
