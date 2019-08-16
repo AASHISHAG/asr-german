@@ -219,7 +219,7 @@ This Readme will be updated regularly to include information about the code and 
 	_./exp/chain_cleaned/tdnn1f_2048_sp_bi/graph/words.txt_
 
 ## Data-Preprocessing for Training
-The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. We need to keep data under asr-german/data/wav
+The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. The pipeline can easliy be extended for new data. We need to keep data under _$KALDI_ROOT/egs/asr-german/recipe_v2/data/wav_ and the respective scripts for data preprocessing can be added at _./recipe_v2/run.sh#L47_
 
 - Files created:  
 	- text  
