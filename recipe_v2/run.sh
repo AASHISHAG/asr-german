@@ -14,7 +14,7 @@ export LC_ALL=C
 export LANG=C
 export LANGUAGE=C
 
-# Refer dependencies from Wall Street Journal Project (Steps and Utils)
+# Refer dependencies from Wall Street Journal Project (WSJ)
 [ ! -L "steps" ] && ln -s ../../wsj/steps
 [ ! -L "utils" ] && ln -s ../../wsj/utils
 [ ! -L "rnnlm" ] && ln -s ../../../scripts/rnnlm/
@@ -44,7 +44,7 @@ RAWDATA=data/wav/german-speechdata-package-v2
 # Create Kaldi's directory structure
 python3 local/prepare_dir_structure.py
 
-# Download the data
+# Download and proces the data
 wget --directory-prefix=data/wav/ http://speech.tools/kaldi_tuda_de/german-speechdata-package-v2.tar.gz
 cd data/wav/
 tar xvfz german-speechdata-package-v2.tar.gz
