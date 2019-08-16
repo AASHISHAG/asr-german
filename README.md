@@ -223,9 +223,9 @@ This Readme will be updated regularly to include information about the code and 
 	
 The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. The pipeline can easliy be extended for new data. We need to keep data under:
 	
-	``` bash
-	$KALDI_ROOT/egs/asr-german/recipe_v2/data/wav
-	```
+``` bash
+$KALDI_ROOT/egs/asr-german/recipe_v2/data/wav
+```
 	
 The respective scripts for data preprocessing can be added at [_run.sh_](recipe_v2/run.sh#L47)
 
