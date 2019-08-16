@@ -237,6 +237,11 @@ Each data clip should contain information regarding the specifics of the audio f
  - utt2spk
  - spk2utt
 
+## text
+## segments
+## wav.scp
+## utt2spk
+## spk2utt
 	
 ## Training
 
