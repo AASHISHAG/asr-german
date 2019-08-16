@@ -229,7 +229,7 @@ $KALDI_ROOT/egs/asr-german/recipe_v2/data/wav
 	
 The respective scripts for data preprocessing can be added at [_run.sh_](recipe_v2/run.sh#L47).
 
-Each data clip should contain information regarding the specifics of the audio files, transcripts, and speakers. Specifically, it will contain the following files:
+Preprocess data so that each clip contains information regarding the specifics of the audio files, transcripts, and speakers. Specifically, it will contain the following files:
 
  - text
  
