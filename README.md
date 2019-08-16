@@ -297,9 +297,47 @@ Preprocess data so that each clip contains information regarding the specifics o
    If your audio files are in a different format (sphere, mp3, flac, speex), you will have to convert them to wav format. The The tool sox will come in handy in many of these cases. 
  
  - utt2spk
- 
+   _utt2spk_ contains the mapping of each utterance to its corresponding speaker. The concept of “speaker” does not have to be related to a person – it can be a room, accent, gender, or anything that could influence the recording. When speaker normalization is performed then, the normalization may actually be removing effects due to the recording quality or particular accent type. This definition of “speaker” then is left up to the modeler.
+
+   utt2spk is a text file with the following format:
+
+   ``` bash
+   utt_id spkr
+   ```
+   
+   utt_id = utterance ID
+   spkr = speaker ID
+
+   Example utt2spk file:
+
+   ``` bash
+   0000000_0000000_103784-104188 0000000
+   0000000_0000000_107130-109799 0000000
+   0000000_0000000_116470-116776 0000000
+   …
+   0000000_0000000_129066-129587 0000000
+   0000000_0000000_129897-130409 0000000
+   ```
+
  - spk2utt
  
+   _spk2utt_ is a file that contains the speaker to utterance mapping. This information is already contained in utt2spk, but in the wrong format. The following line of code will automatically create the spk2utt file and simultaneously verify that all data files are present and in the correct format:
+
+   ``` bash
+   utils/fix_data_dir.sh data/train
+   ```
+   While spk2utt has already been created, you can verify that it has the following format:
+
+   ``` bash
+   spkr utt_id1 utt_id2 utt_id3
+   ```
+   Example spk2utt file:
+   
+   ``` bash
+   0000000 0000000_0000000_103784-104188 0000000_0000000_107130-109799 0000000_0000000_116470-116776 0000000_0000000_129066-129587 0000000_0000000_129897-130409 0000000_0000000_131515-131982 0000000_0000000_132017-132451 0000000_0000000_138839-139224 0000000_0000000_141927-142863 0000000_0000000_144840-145112 0000000_0000000_149113-149742 
+   …
+   0000000_0000000_149860-150958 0000000_0000000_155252-155968 0000000_0000000_159837-160356 0000000_0000000_160517-160603 0000000_0000000_160621-160844 0000000_0000000_160845-162643 0000000_0000000_162792-164380 0000000_0000000_164382-164717 
+   ```	
 	
 ## Training
 
