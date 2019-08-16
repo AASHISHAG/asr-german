@@ -221,7 +221,7 @@ This Readme will be updated regularly to include information about the code and 
 	
 ## Data-Preprocessing for Training
 	
-The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. The pipeline can easliy be extended for new data. We need to keep data under:
+The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. The pipeline can easliy be extended for new data. The data should be placed at the following path.
 	
 ``` bash
 $KALDI_ROOT/egs/asr-german/recipe_v2/data/wav
