@@ -277,14 +277,29 @@ Preprocess data so that each clip contains information regarding the specifics o
    ```
 	
  - wav.scp
- - utt2spk
- - spk2utt
+ 
+   _wav.scp_ contains the location for each of the audio files. If your audio files are already in wav format, use the following template:
+	
+   ``` bash
+   file_id path/file
+   ```
+   Example wav.scp file:
 
-**_text_**
-**_segments_**
-**_wav.scp_**
-**_utt2spk_**
-**_spk2utt_**
+   ``` bash
+   b522038b-0e97-42c5-87a5-a95df5b38bcf_2014-03-20-13-13-27_d data/wav/german-speechdata-package-v2/train/2014-03-20-13-13-27_Yamaha.wav
+   b522038b-0e97-42c5-87a5-a95df5b38bcf_2014-03-20-13-13-34_a data/wav/german-speechdata-package-v2/train/2014-03-20-13-13-34_Kinect-Beam.wav
+   b522038b-0e97-42c5-87a5-a95df5b38bcf_2014-03-20-13-13-34_b data/wav/german-speechdata-package-v2/train/2014-03-20-13-13-34_Kinect-RAW.wav
+   …
+   b522038b-0e97-42c5-87a5-a95df5b38bcf_2014-03-20-13-13-34_d data/wav/german-speechdata-package-v2/train/2014-03-20-13-13-34_Yamaha.wav
+   b522038b-0e97-42c5-87a5-a95df5b38bcf_2014-03-20-13-13-49_a data/wav/german-speechdata-package-v2/train/2014-03-20-13-13-49_Kinect-Beam.wav
+   ```
+
+   If your audio files are in a different format (sphere, mp3, flac, speex), you will have to convert them to wav format. The The tool sox will come in handy in many of these cases. 
+ 
+ - utt2spk
+ 
+ - spk2utt
+ 
 	
 ## Training
 
