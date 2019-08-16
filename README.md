@@ -475,7 +475,7 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 * Copy project's code in your directory.
 
 	``` bash
-	$ cp -r /mnt/rds/redhen/gallina/home/axa1142/ ./new-directory
+	$ cp -R /mnt/rds/redhen/gallina/home/axa1142/ ./new-directory
 	```
 	
 ### Running the code
