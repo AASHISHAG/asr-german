@@ -244,13 +244,13 @@ Each data clip should contain information regarding the specifics of the audio f
    Example text file:
 
    ``` bash
-   110236_20091006_82330_F_0001 I’M WORRIED ABOUT THAT
-   110236_20091006_82330_F_0002 AT LEAST NOW WE HAVE THE BENEFIT
-   110236_20091006_82330_F_0003 DID YOU EVER GO ON STRIKE
+   0000241_0000659_227982-228681 Schon neunzehn Hundert neunundvierzig hatte Thomas Mann anlässlich der Feiern zu Goethes zwei Hundert Geburtstag
+   0000241_0000659_228675-228930 Deutschland einen Besuch abgestattet
+   0000241_0000659_228959-229629 zwar in Frankfurt am Main wie auch in Weimar was von der Öffentlichkeit misstrauisch beäugt
     …
-   120958_20100126_97016_M_0285 SOMETIMES LESS IS BETTER
-   120958_20100126_97016_M_0286 YOU MUST LOVE TO COOK
-  ```
+   0000241_0000659_229657-229987 von Mann jedoch mit dem Satz kommentiert wurde
+   0000241_0000659_230044-230222 Ich kenne keine Zonen
+   ```
 
  - segments
  - wav.scp
