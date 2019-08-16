@@ -233,7 +233,7 @@ Preprocess data so that each clip contains information regarding the specifics o
 
  - text
  
-   The text file is essentially the utterance-by-utterance transcript of the corpus. This is a text file with the following format:
+   The _text_ file is essentially the utterance-by-utterance transcript of the corpus. This is a text file with the following format:
 	
    ``` bash
    utt_id WORD1 WORD2 WORD3 WORD4 …
@@ -253,6 +253,35 @@ Preprocess data so that each clip contains information regarding the specifics o
    ```
 
  - segments
+   
+   The segments file contains the start and end time for each utterance in an audio file. This is a text file with the following format:
+
+   utt_id file_id start_time end_time
+
+   utt_id = utterance ID
+   file_id = file ID
+   start_time = start time in seconds
+   end_time = end time in seconds
+
+   Example segments file:
+
+   ``` bash
+	110236_20091006_82330_F_001 110236_20091006_82330_F 0.0 3.44
+	110236_20091006_82330_F_002 110236_20091006_82330_F 4.60 8.54
+	110236_20091006_82330_F_003 110236_20091006_82330_F 9.45 12.05
+	110236_20091006_82330_F_004 110236_20091006_82330_F 13.29 16.13
+	110236_20091006_82330_F_005 110236_20091006_82330_F 17.27 20.36
+	110236_20091006_82330_F_006 110236_20091006_82330_F 22.06 25.46
+	110236_20091006_82330_F_007 110236_20091006_82330_F 25.86 27.56
+	110236_20091006_82330_F_008 110236_20091006_82330_F 28.26 31.24
+	…
+	120958_20100126_97016_M_282 120958_20100126_97016_M 915.62 919.67
+	120958_20100126_97016_M_283 120958_20100126_97016_M 920.51 922.69
+	120958_20100126_97016_M_284 120958_20100126_97016_M 922.88 924.27
+	120958_20100126_97016_M_285 120958_20100126_97016_M 925.35 927.88
+	120958_20100126_97016_M_286 120958_20100126_97016_M 928.31 930.51
+	```
+	
  - wav.scp
  - utt2spk
  - spk2utt
