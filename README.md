@@ -532,9 +532,9 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	END|20190812181455|2019-08-12_1800_DE_DasErste_Tagesschau
 	```
 	
-## Blogs
+## Blog
 
-Link to the Blog is: https://aashishag.github.io/blog/
+Link to the Blog: https://aashishag.github.io/blog/
 
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
