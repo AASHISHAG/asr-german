@@ -220,8 +220,8 @@ This Readme will be updated regularly to include information about the code and 
 
 	
 ## Data-Preprocessing for Training
-	
-The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. The pipeline can easliy be extended for new data. The data should be placed at the following path.
+
+The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) is the basis of a lot of this section. The pipeline can easily be extended for new data. The data should be placed in the following path.
 	
 ``` bash
 $KALDI_ROOT/egs/asr-german/recipe_v2/data/wav
@@ -294,11 +294,11 @@ Preprocess data so that each clip contains information regarding the specifics o
    b522038b-0e97-42c5-87a5-a95df5b38bcf_2014-03-20-13-13-49_a data/wav/german-speechdata-package-v2/train/2014-03-20-13-13-49_Kinect-Beam.wav
    ```
 
-   If your audio files are in a different format (sphere, mp3, flac, speex), you will have to convert them to wav format. The The tool sox will come in handy in many of these cases. 
+   If your audio files are in a different format (sphere, mp3, flac, speex), you will have to convert them to wav format. The tool sox will come in handy in many of these cases. 
  
  - **utt2spk**
    
-   _utt2spk_ contains the mapping of each utterance to its corresponding speaker. The concept of “speaker” does not have to be related to a person – it can be a room, accent, gender, or anything that could influence the recording. When speaker normalization is performed then, the normalization may actually be removing effects due to the recording quality or particular accent type. This definition of “speaker” then is left up to the modeler.
+   _utt2spk_ contains the mapping of each utterance to its corresponding speaker. The concept of “speaker” does not have to be related to a person – it can be a room, accent, gender, or anything that could influence the recording. This definition of “speaker” then is left up to the modeler.
 
    utt2spk is a text file with the following format:
 
@@ -344,7 +344,7 @@ Preprocess data so that each clip contains information regarding the specifics o
    ```	
 	
 
-	The above steps are enough to train the model with new data. If necessary the other stages of the speech recognition can also be modelled under following:
+   The above steps are enough to train the model with new data. If necessary, the other stages of speech recognition can also be modeled under the following:
 	
 	- [Phoneme](recipe_v2/run.sh#L80)
 	
@@ -365,7 +365,7 @@ Firstly, change the server configurations at [cmd.sh](recipe_v2/cmd.sh)
    export nDecodeJobs=12
    ```
 
-Finally run the model on training.
+Finally, run the model on training.
    
    ``` bash
    $ cd $KALDI_ROOT/egs/asr-german/recipe_v2
