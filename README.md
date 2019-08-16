@@ -2,7 +2,7 @@
 
 _This is my [Google Summer of Code 2019](https://summerofcode.withgoogle.com/projects/#5623384702976000) Project with the [Distributed Little Red Hen Lab](http://www.redhenlab.org/)._
 
-This project aims to develop a working Speech to Text module for the Red Hen Lab’s current Audio processing pipeline. This system will be used to transcribe the Television news broadcast captured by Red Hen in Germany.
+This project aims to develop a working Speech to Text module using [Kaldi](http://www.kaldi-asr.org/) for the Red Hen Lab’s current Audio processing pipeline. This system will be used to transcribe the Television news broadcast captured by Red Hen in Germany.
 
 This Readme will be updated regularly to include information about the code and guidelines to use this software.
 
@@ -508,9 +508,9 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	
 	./kaldi_de.slurm (_if model should transcribe today's news_)
 	
-	./kaldi_de.slurm 1 (_if model should transcribe yesterdays news_)
+	./kaldi_de.slurm 1 (_if model should transcribe yesterday's news_)
 	
-	./kaldi_de.slurm 2 (_if model should transcribe day before yesterdays news_)
+	./kaldi_de.slurm 2 (_if model should transcribe day before yesterday's news_)
 	
 ### Results of Red Hen News Dataset
 
@@ -531,6 +531,9 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	20190812180014.280|20190812180024.280|ASR_01|So ist es die erste deutsche Fernsehen mit der Tagesschau. Heute im Studio Jan Hofer Nama der Damen und Herren ich begrüße sie zwei Tage. Bundesumweltministerin Schultze will die Hersteller von wegwerfen Artikeln künftig an den Kosten für die Müllbeseitigung beteiligen die es für die Politiker werden stellt ihre Pläne heute in Berlin vor Die sprach von einer regelrechten Müll Flut in manchen Städten Ziel sei eine finanzielle Entlastung der Kommunen und ein Umdenken in der Gesellschaft betroffen werden. <UNK> anderem Firmen sein die Verpackungen Getränke Becher Plastiktüten und Zigaretten Filter produzieren. Alltag auf deutschen Straßen. Reste der wegwerfen Gesellschaft. Für die Aufräumarbeiten Zahlen Städte und Gemeinden. Die Bundesumweltministerin will die Kommunen entlasten mit Geld das sie bei den Herstellern der wegwerfen Artikel eintreiben möchte. Heißt das Sie müssen für das Einsammeln dieser Produkte zahlen sie müssen sich anteilsmäßig an den Kosten für das Aufstellen von Abfall Behältern Beteiligungen ebenso müssen sich diese Hersteller an den Kosten für die Entsorgung beziehungsweise das Recycling beteiligen damit setzt wenn ihr Schulz für eine EU Richtlinie. Der Koalitionspartner aber sorgt das ginge auch anders ohne eine Zusatzbelastungen der Verpackungsindustrie
 	END|20190812181455|2019-08-12_1800_DE_DasErste_Tagesschau
 	```
+	
+Blogs
+For updation and status of the work done so far, I have made a GSoC blog. Please refer to it for my all GSoC blogposts about the progress. Link to the Blog is: https://gulshan-mittal.github.io/GSoC19-Blog/
 
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
