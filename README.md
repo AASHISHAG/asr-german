@@ -244,12 +244,12 @@ Preprocess data so that each clip contains information regarding the specifics o
    Example text file:
 
    ``` bash
-   0000241_0000659_227982-228681 Schon neunzehn Hundert neunundvierzig hatte Thomas Mann anlässlich der Feiern zu Goethes zwei Hundert Geburtstag
-   0000241_0000659_228675-228930 Deutschland einen Besuch abgestattet
-   0000241_0000659_228959-229629 zwar in Frankfurt am Main wie auch in Weimar was von der Öffentlichkeit misstrauisch beäugt
-    …
-   0000241_0000659_229657-229987 von Mann jedoch mit dem Satz kommentiert wurde
-   0000241_0000659_230044-230222 Ich kenne keine Zonen
+   0000000_0000000_103784-104188 Hundert siebenunddreißig wurde deutlich
+   0000000_0000000_107130-109799 in mehrfacher Hinsicht von Interesse
+   0000000_0000000_116470-116776 immer stärkerer Einflussnahme des Deutschen Reiches
+   …
+   0000000_0000000_129066-129587 Gründung des Großdeutschen Reiches
+   0000000_0000000_129897-130409 in ihrer zweiten Sitzung das Gesetz
    ```
 
  - segments
@@ -268,12 +268,12 @@ Preprocess data so that each clip contains information regarding the specifics o
    Example segments file:
 
    ``` bash
-   0000014_0000846_727631-728082 0000014_0000846 7276.305 7280.820
-   0000014_0000846_728385-730387 0000014_0000846 7283.845 7303.870
-   0000014_0000846_730466-731326 0000014_0000846 7304.655 7313.260
+   0000000_0000000_103784-104188 0000000_0000000 1037.835 1041.880
+   0000000_0000000_107130-109799 0000000_0000000 1071.295 1097.990
+   0000000_0000000_116470-116776 0000000_0000000 1164.695 1167.760
    …
-   0000014_0000846_731584-732586 0000014_0000846 7315.835 7325.860
-   0000014_0000846_732781-734238 0000014_0000846 7327.805 7342.380
+   0000000_0000000_129066-129587 0000000_0000000 1290.655 1295.870
+   0000000_0000000_129897-130409 0000000_0000000 1298.975 1304.090
    ```
 	
  - wav.scp
