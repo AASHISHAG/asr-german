@@ -244,6 +244,29 @@ Here are some of the results I obtained after training the model. The script [_r
 **Percentage of _Deletion_, _Insertion_ and _Subsitution Error_ across different Training Stages**
 <img align = "left" src="./images/error_graph-1.png" width='43%' height='45%'> <img float ="right" src="./images/error_graph-2.png" width='44%' height='45%'>
 
+``` bash
+%WER 58.10 [ 38790 / 66768, 1903 ins, 16466 del, 20421 sub ] [PARTIAL] exp//tri1/decode_dev_nosp/wer_10_0.0
+%WER 61.21 [ 42600 / 69600, 1981 ins, 18961 del, 21658 sub ] [PARTIAL] exp//tri1/decode_test_nosp/wer_10_0.0
+%WER 57.75 [ 38560 / 66768, 1614 ins, 18899 del, 18047 sub ] [PARTIAL] exp//tri2/decode_dev_nosp/wer_10_0.0
+%WER 59.67 [ 41528 / 69600, 2130 ins, 18606 del, 20792 sub ] [PARTIAL] exp//tri2/decode_test_nosp/wer_9_0.0
+%WER 28.85 [ 19261 / 66768, 3215 ins, 2902 del, 13144 sub ] [PARTIAL] exp//tri3/decode_dev_nosp/wer_14_0.0
+%WER 28.08 [ 18750 / 66768, 3345 ins, 2516 del, 12889 sub ] [PARTIAL] exp//tri3/decode_dev_pron/wer_13_0.5
+%WER 29.56 [ 20572 / 69600, 3568 ins, 2894 del, 14110 sub ] [PARTIAL] exp//tri3/decode_test_nosp/wer_13_0.0
+%WER 29.14 [ 20279 / 69600, 3557 ins, 2696 del, 14026 sub ] [PARTIAL] exp//tri3/decode_test_pron/wer_13_0.5
+%WER 23.44 [ 15653 / 66768, 3164 ins, 1976 del, 10513 sub ] [PARTIAL] exp//tri4_cleaned/decode_dev/wer_14_0.5
+%WER 31.36 [ 20941 / 66768, 3578 ins, 2911 del, 14452 sub ] [PARTIAL] exp//tri4_cleaned/decode_dev.si/wer_13_0.5
+%WER 24.86 [ 17305 / 69600, 3544 ins, 1996 del, 11765 sub ] [PARTIAL] exp//tri4_cleaned/decode_test/wer_13_0.5
+%WER 31.90 [ 22202 / 69600, 3858 ins, 2984 del, 15360 sub ] [PARTIAL] exp//tri4_cleaned/decode_test.si/wer_13_0.5
+%WER 24.08 [ 16075 / 66768, 3463 ins, 1819 del, 10793 sub ] [PARTIAL] exp//tri4/decode_dev_pron/wer_14_0.5
+%WER 35.20 [ 23504 / 66768, 4244 ins, 3034 del, 16226 sub ] [PARTIAL] exp//tri4/decode_dev_pron.si/wer_14_0.5
+%WER 25.50 [ 17745 / 69600, 3879 ins, 1855 del, 12011 sub ] [PARTIAL] exp//tri4/decode_test_pron/wer_13_0.5
+%WER 35.44 [ 24668 / 69600, 4759 ins, 2898 del, 17011 sub ] [PARTIAL] exp//tri4/decode_test_pron.si/wer_13_0.5
+%WER 14.61 [ 9758 / 66768, 2517 ins, 884 del, 6357 sub ] [PARTIAL] exp//chain_cleaned/tdnn1f_2048_sp_bi/decode_dev/wer_12_1.0
+%WER 15.62 [ 10871 / 69600, 2746 ins, 865 del, 7260 sub ] [PARTIAL] exp//chain_cleaned/tdnn1f_2048_sp_bi/decode_test/wer_11_1.0
+```
+
+**_Some Audio Clips and Results_**
+
 **[DE_01](https://aashishag.github.io/others/de_1.wav)**
 ``` bash
 $ Actual: Gerrit erinnerte sich daran dass er einst einen Eid geschworen hatte
@@ -304,27 +327,6 @@ $ Actual: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 ```
 
-``` bash
-%WER 58.10 [ 38790 / 66768, 1903 ins, 16466 del, 20421 sub ] [PARTIAL] exp//tri1/decode_dev_nosp/wer_10_0.0
-%WER 61.21 [ 42600 / 69600, 1981 ins, 18961 del, 21658 sub ] [PARTIAL] exp//tri1/decode_test_nosp/wer_10_0.0
-%WER 57.75 [ 38560 / 66768, 1614 ins, 18899 del, 18047 sub ] [PARTIAL] exp//tri2/decode_dev_nosp/wer_10_0.0
-%WER 59.67 [ 41528 / 69600, 2130 ins, 18606 del, 20792 sub ] [PARTIAL] exp//tri2/decode_test_nosp/wer_9_0.0
-%WER 28.85 [ 19261 / 66768, 3215 ins, 2902 del, 13144 sub ] [PARTIAL] exp//tri3/decode_dev_nosp/wer_14_0.0
-%WER 28.08 [ 18750 / 66768, 3345 ins, 2516 del, 12889 sub ] [PARTIAL] exp//tri3/decode_dev_pron/wer_13_0.5
-%WER 29.56 [ 20572 / 69600, 3568 ins, 2894 del, 14110 sub ] [PARTIAL] exp//tri3/decode_test_nosp/wer_13_0.0
-%WER 29.14 [ 20279 / 69600, 3557 ins, 2696 del, 14026 sub ] [PARTIAL] exp//tri3/decode_test_pron/wer_13_0.5
-%WER 23.44 [ 15653 / 66768, 3164 ins, 1976 del, 10513 sub ] [PARTIAL] exp//tri4_cleaned/decode_dev/wer_14_0.5
-%WER 31.36 [ 20941 / 66768, 3578 ins, 2911 del, 14452 sub ] [PARTIAL] exp//tri4_cleaned/decode_dev.si/wer_13_0.5
-%WER 24.86 [ 17305 / 69600, 3544 ins, 1996 del, 11765 sub ] [PARTIAL] exp//tri4_cleaned/decode_test/wer_13_0.5
-%WER 31.90 [ 22202 / 69600, 3858 ins, 2984 del, 15360 sub ] [PARTIAL] exp//tri4_cleaned/decode_test.si/wer_13_0.5
-%WER 24.08 [ 16075 / 66768, 3463 ins, 1819 del, 10793 sub ] [PARTIAL] exp//tri4/decode_dev_pron/wer_14_0.5
-%WER 35.20 [ 23504 / 66768, 4244 ins, 3034 del, 16226 sub ] [PARTIAL] exp//tri4/decode_dev_pron.si/wer_14_0.5
-%WER 25.50 [ 17745 / 69600, 3879 ins, 1855 del, 12011 sub ] [PARTIAL] exp//tri4/decode_test_pron/wer_13_0.5
-%WER 35.44 [ 24668 / 69600, 4759 ins, 2898 del, 17011 sub ] [PARTIAL] exp//tri4/decode_test_pron.si/wer_13_0.5
-%WER 14.61 [ 9758 / 66768, 2517 ins, 884 del, 6357 sub ] [PARTIAL] exp//chain_cleaned/tdnn1f_2048_sp_bi/decode_dev/wer_12_1.0
-%WER 15.62 [ 10871 / 69600, 2746 ins, 865 del, 7260 sub ] [PARTIAL] exp//chain_cleaned/tdnn1f_2048_sp_bi/decode_test/wer_11_1.0
-```
-	
 ## Running code at Case HPC
 
 ### Prerequisites
