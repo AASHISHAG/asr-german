@@ -358,12 +358,19 @@ Preprocess data so that each clip contains information regarding the specifics o
 	
 ## Training
 
-* Run
+According to server configurations change the number of jobs at [cmd.sh](recipe_v2/cmd.sh)
 
-	``` bash
-	$ cd kaldi/egs/asr-german/recipe_v2
-	$ ./run.sh
-	```
+   ``` bash
+   export nJobs=28
+   export nDecodeJobs=12
+   ```
+
+According to server configurations change the number of jobs at [cmd.sh](recipe_v2/cmd.sh)
+   
+   ``` bash
+   $ cd $KALDI_ROOT/egs/asr-german/recipe_v2
+   $ nohup ./run.sh &
+   ```
 	
 **_NOTE:_** _The training would take a couple of days depending on the server configurations. It is recommended to run it in the background_.
 
