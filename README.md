@@ -343,6 +343,19 @@ Preprocess data so that each clip contains information regarding the specifics o
    0000000_0000000_160621-160844 0000000_0000000_160845-162643 0000000_0000000_162792-164380 0000000_0000000_164382-164717
    ```	
 	
+
+	The above steps are enough to train the model with new data. If necessary the other stages of the speech recognition can also be modelled.
+	
+	- [Phoneme](recipe_v2/run.sh#L80)
+	
+	- [Grapheme-to-Phoneme](recipe_v2/run.sh#L89)
+	
+	- [Language Modelling](recipe_v2/run.sh#L121)
+	
+	- [Feature Extraction - MFCC](recipe_v2/run.sh#L129)
+	
+	- [Acoustic Modelling](recipe_v2/run.sh#L161)
+	
 ## Training
 
 * Run
