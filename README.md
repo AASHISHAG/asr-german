@@ -358,7 +358,7 @@ Preprocess data so that each clip contains information regarding the specifics o
 	
 ## Training
 
-According to the server configurations change the number of jobs at [cmd.sh](recipe_v2/cmd.sh)
+Firstly, change the server configurations at [cmd.sh](recipe_v2/cmd.sh)
 
    ``` bash
    export nJobs=28
