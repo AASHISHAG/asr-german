@@ -231,7 +231,7 @@ The respective scripts for data preprocessing can be added at [_run.sh_](recipe_
 
 Preprocess data so that each clip contains information regarding the specifics of the audio files, transcripts, and speakers. Specifically, it will contain the following files:
 
- - text
+ - **text**
  
    The _text_ file is essentially the utterance-by-utterance transcript of the corpus. This is a text file with the following format:
 	
@@ -252,7 +252,7 @@ Preprocess data so that each clip contains information regarding the specifics o
    0000000_0000000_129897-130409 in ihrer zweiten Sitzung das Gesetz
    ```
 
- - segments
+ - **segments**
    
    The _segments_ file contains the start and end time for each utterance in an audio file. This is a text file with the following format:
 
@@ -276,7 +276,7 @@ Preprocess data so that each clip contains information regarding the specifics o
    0000000_0000000_129897-130409 0000000_0000000 1298.975 1304.090
    ```
 	
- - wav.scp
+ - **wav.scp**
  
    _wav.scp_ contains the location for each of the audio files. If your audio files are already in wav format, use the following template:
 	
@@ -296,7 +296,8 @@ Preprocess data so that each clip contains information regarding the specifics o
 
    If your audio files are in a different format (sphere, mp3, flac, speex), you will have to convert them to wav format. The The tool sox will come in handy in many of these cases. 
  
- - utt2spk
+ - **utt2spk**
+   
    _utt2spk_ contains the mapping of each utterance to its corresponding speaker. The concept of “speaker” does not have to be related to a person – it can be a room, accent, gender, or anything that could influence the recording. When speaker normalization is performed then, the normalization may actually be removing effects due to the recording quality or particular accent type. This definition of “speaker” then is left up to the modeler.
 
    utt2spk is a text file with the following format:
@@ -319,7 +320,7 @@ Preprocess data so that each clip contains information regarding the specifics o
    0000000_0000000_129897-130409 0000000
    ```
 
- - spk2utt
+ - **spk2utt**
  
    _spk2utt_ is a file that contains the speaker to utterance mapping. This information is already contained in utt2spk, but in the wrong format. The following line of code will automatically create the spk2utt file and simultaneously verify that all data files are present and in the correct format:
 
