@@ -192,6 +192,9 @@ This Readme will be updated regularly to include information about the code and 
 	$ pip3 install git+https://github.com/sequitur-g2p/sequitur-g2p@master
 	$ make -j `nproc`
 	```
+	
+	**_NOTE_**:
+	_Change Sequitur G2P path in $KALDI_ROOT/egs/asr-german/recipe_v2/cmd.sh_
 
 * **Kaldi Gstreamer Server**:
 	
