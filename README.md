@@ -532,8 +532,9 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 	END|20190812181455|2019-08-12_1800_DE_DasErste_Tagesschau
 	```
 	
-Blogs
-For updation and status of the work done so far, I have made a GSoC blog. Please refer to it for my all GSoC blogposts about the progress. Link to the Blog is: https://gulshan-mittal.github.io/GSoC19-Blog/
+## Blogs
+
+Link to the Blog is: https://aashishag.github.io/blog/
 
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
