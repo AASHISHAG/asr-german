@@ -227,13 +227,16 @@ The [official Kaldi's documentation](https://kaldi-asr.org/doc/data_prep.html) i
 $KALDI_ROOT/egs/asr-german/recipe_v2/data/wav
 ```
 	
-The respective scripts for data preprocessing can be added at [_run.sh_](recipe_v2/run.sh#L47)
+The respective scripts for data preprocessing can be added at [_run.sh_](recipe_v2/run.sh#L47).
 
-- Files created:  
-	- text  
-	- utt2spk  
-	- segments  
-	- wav.scp  
+Each data clip should contain information regarding the specifics of the audio files, transcripts, and speakers. Specifically, it will contain the following files:
+
+ - text
+ - segments
+ - wav.scp
+ - utt2spk
+ - spk2utt
+
 	
 ## Training
 
