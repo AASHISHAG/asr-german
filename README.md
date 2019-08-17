@@ -475,6 +475,8 @@ $ module load singularity
 $ singularity pull --name kaldi_de.sif shub://AASHISHAG1/test:kaldi
 ```
 
+_**NOTE:** This step is shown just for documentation. The below scripts would do it automatically._
+
 ### Prerequisites
 
 * Copy project's code in your directory.
