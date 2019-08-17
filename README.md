@@ -470,10 +470,10 @@ $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 
 The entire project setup is available at _/mnt/rds/redhen/gallina/home/axa1142/_ and can be directly used to run the model and reproduce the result. The project is implemented using Singularity, which is available at _Singularity Hub_ can be downloaded at HPC.
 
-	``` bash
-	$ module load singularity
-	$ singularity pull --name kaldi_de.sif shub://AASHISHAG1/test:kaldi
-	```
+``` bash
+$ module load singularity
+$ singularity pull --name kaldi_de.sif shub://AASHISHAG1/test:kaldi
+```
 
 ### Prerequisites
 
