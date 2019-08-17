@@ -508,7 +508,7 @@ $ ./run-model.sh path_to_audio
 * Transcribe Red Hen News dataset
 	
 ``` bash
-$ ./kaldi_de.slurm specify the number of days from the current date the model should transcribe
+$ ./run-model.slurm specify the number of days from the current date the model should transcribe
 ```
 
 **_EXAMPLE:_** 
