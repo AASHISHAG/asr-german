@@ -4,6 +4,19 @@ _This is my [Google Summer of Code 2019](https://summerofcode.withgoogle.com/pro
 
 This project aims to develop a working Speech to Text module using [Kaldi](http://www.kaldi-asr.org/) for the Red Hen Lab’s current Audio processing pipeline. This system will be used to transcribe the Television news broadcast captured by Red Hen in Germany.
 
+## TODOLIST
+
+- [x] Set up Kaldi
+- [x] Data Preparation
+- [x] Feature Exraction
+- [x] Language Modelling
+- [x] Phoneme Modelling
+- [x] Acoustic Modelling
+- [x] Training
+- [x] Creating Singularity
+- [x] Running on HPC and Creating German Speech Pipeline
+- [x] Demo
+
 This Readme will be updated regularly to include information about the code and guidelines to use this software.
 
 #### Contents
