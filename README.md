@@ -16,6 +16,7 @@ This project aims to develop a working Speech to Text module using [Kaldi](http:
 - [x] Creating Singularity
 - [x] Running on HPC and Creating German Speech Pipeline
 - [x] Demo
+- [x] Documentation
 
 This Readme will be updated regularly to include information about the code and guidelines to use this software.
 
@@ -217,7 +218,7 @@ This Readme will be updated regularly to include information about the code and 
 	$ cd $KALDI_ROOT/tools/
 	$ git clone https://github.com/alumae/kaldi-gstreamer-server
 	$ cd kaldi-gstreamer-server
-	$ cp ../../egs/asr-german/kaldi-de.yaml .
+	$ cp ../../egs/asr-german/kaldi_de.yaml .
 	```
 	**_NOTE:_** Specify the path of _final.mdl_, _mfcc.conf_, _HCLG.fst_ and _words.txt_ in _kaldi-de.yaml_ (after training).
 	
