@@ -527,11 +527,11 @@ $ ./run-model.slurm specify the number of days from the current date the model s
 
 **_EXAMPLE:_** 
 	
-./kaldi_de.slurm (_if model should transcribe today's news_)
+./run-model.slurm (_if model should transcribe today's news_)
 	
-./kaldi_de.slurm 1 (_if model should transcribe yesterday's news_)
+./run-model.slurm 1 (_if model should transcribe yesterday's news_)
 	
-./kaldi_de.slurm 2 (_if model should transcribe day before yesterday's news_)
+./run-model.slurm 2 (_if model should transcribe day before yesterday's news_)
 	
 ### Results of Red Hen News Dataset
 
