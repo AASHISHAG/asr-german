@@ -27,7 +27,8 @@ This Readme will be updated regularly to include information about the code and 
 3. [Training](#training)
 4. [Some Training Results](#some-training-results)
 5. [Running code at Case HPC](#running-code-at-case-hpc)
-6. [Acknowledgments](#acknowledgments)
+6. [Important Links:](#important-links)
+7. [Acknowledgments](#acknowledgments)
 
 ## Getting Started
 
