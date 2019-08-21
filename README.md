@@ -421,64 +421,82 @@ Here are some of the results I obtained after training the model. The script [_r
 
 **_Some Audio Clips and Results_**
 
-**[DE_01](https://aashishag.github.io/others/de_1.wav)**
+**[DE_01](Male)(https://aashishag.github.io/others/de_1.wav)**
 ``` bash
 $ Actual: Gerrit erinnerte sich daran dass er einst einen Eid geschworen hatte
 $ Output: Garrett erinnerte sich daran dass er einst einen Eid geschworen hatte
 ```
 
-**[DE_02](https://aashishag.github.io/others/de_2.wav)**
+**[DE_02](Male)(https://aashishag.github.io/others/de_2.wav)**
 ``` bash
 $ Actual: Wenn man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
 $ Output: Weil man schnell fährt ist man von Emden nach Landshut nicht lange unterwegs
 ```
 
-**[DE_03](https://aashishag.github.io/others/de_3.wav)**
+**[DE_03](Male)(https://aashishag.github.io/others/de_3.wav)**
 ``` bash
 $ Actual: Valentin hat das Handtuch geworfen
 $ Output: Valentin hat das Handtuch geworfen
 ```
 
-**[DE_04](https://aashishag.github.io/others/de_4.wav)**
+**[DE_04](Male)(https://aashishag.github.io/others/de_4.wav)**
 ``` bash
 $ Actual: Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
 $ Output: Auf das was jetzt kommt habe ich nämlich absolut keinen Bock
 ```
 
-**[DE_05](https://aashishag.github.io/others/de_5.wav)**
+**[DE_05](Male)(https://aashishag.github.io/others/de_5.wav)**
 ``` bash
 $ Actual: Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
 $ Output: Ich könnte eine Mitfahrgelegenheit nach Schweinfurt anbieten
 ```
 
-**[DE_06](https://aashishag.github.io/others/de_6.wav)**
+**[DE_06](Male)(https://aashishag.github.io/others/de_6.wav)**
 ``` bash
 $ Actual: Man sollte den Länderfinanzausgleich durch einen Bundesligasoli ersetzen
 $ Output: Man sollte den Länderfinanzausgleich durch ein Bundesliga Soli ersetzen
 ```
 
-**[DE_07](https://aashishag.github.io/others/de_7.wav)**
+**[DE_07](Male)(https://aashishag.github.io/others/de_7.wav)**
 ``` bash
 $ Actual: Von Salzburg ist es doch nicht weit bis zum Chiemsee
 $ Output: Von Salzburg ist es doch nicht weit Bistum Chiemsee
 ```
 
-**[DE_08](https://aashishag.github.io/others/de_8.wav)**
+**[DE_08](Male)(https://aashishag.github.io/others/de_8.wav)**
 ``` bash
 $ Actual: Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige Herausforderung
 $ Output: Selbst für den erfahrensten Chirurgen ist der Tumor eine knifflige raus Federung
 ```
 
-**[DE_09](https://aashishag.github.io/others/de_9.wav)**
+**[DE_09](Male)(https://aashishag.github.io/others/de_9.wav)**
 ``` bash
 $ Actual: Folgende Lektüre kann ich ihnen zum Thema Kognitionspsychologie empfehlen
 $ Output: Folgende Lektüre kann ich ihn zum Thema Kognitionspsychologie empfehlen
 ``` 
 
-**[DE_10](https://aashishag.github.io/others/de_10.wav)**
+**[DE_10](Male)(https://aashishag.github.io/others/de_10.wav)**
 ``` bash
 $ Actual: Warum werden da keine strafrechtlichen Konsequenzen gezogen
 $ Output: Warum werden da keine strafrechtlichen Konsequenzen gezogen
+```
+
+**[DE_11](Female)(https://aashishag.github.io/others/de_11.wav)**
+``` bash
+$ Actual: Cedrik selbst wußte kein Sterbenswörtchen davon nie war etwas Derartiges in seiner Gegenwart auch nur erwähnt worden
+$ Output: Drake selbst wusste kein Sterbenswörtchen davon nie war etwas Derartiges in seiner Gegenwart auch nur erwähnt worden
+```
+
+**[DE_12](Female)(https://aashishag.github.io/others/de_12.wav)**
+``` bash
+$ Actual: Dann wachsen die Haselsträucher und die Kletterrosen so dicht an den Mauern, daß man vor lauter Grün nicht in die Fenster sehen kann, trotzdem sie ganz niedrig liegen
+$ Output: Dann wachsen die Haselsträucher und die Kletterrosen so dicht an den Mauern dass man vor lauter grün nicht in die Fenster sehen kann. Dem sie ganz niedrig liegen.
+```
+
+**[DE_13](Female)(https://aashishag.github.io/others/de_13.wav)**
+``` bash
+$ Actual: Durch das grüne Tal windet sich das murmelnde Flüßchen, aus allen Gärten und Baumhainen lugen die schmucken Landhäuser und locken die weißgedeckten Tische der freundlichen Wirte
+$ Output: Durch das grüne Tal windet sich das murmelnde Flüsschen aus allen Gärten und Baumhainen Logen die schmucken Landhäuser und locken die weißgedeckten Tische der freundlichen Wirte
 ```
 
 ## Running code at Case HPC
