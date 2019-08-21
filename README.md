@@ -15,7 +15,7 @@ This project aims to develop a working Speech to Text module using [Kaldi](http:
 - [x] Training
 - [x] Creating Singularity
 - [x] Running on HPC and Creating German Speech Pipeline
-- [x] Demo
+- [x] Presentation + Demo
 - [x] Documentation
 
 This Readme will be updated regularly to include information about the code and guidelines to use this software.
@@ -553,11 +553,15 @@ ASR_01|2019-08-15 08:34|Source_Program=Kaldi,infer.sh|Source_Person=Aashish Agar
 END|20190812181455|2019-08-12_1800_DE_DasErste_Tagesschau
 ```
 	
-## Blog
+## Important Links:
 
-Link to the Blog: https://aashishag.github.io/blog/
+**Blog:** https://aashishag.github.io/blog/
 
-Link to the Website: https://aashishag.github.io/asr-german/
+**Website:** https://aashishag.github.io/asr-german/
+
+**Demo:** https://drive.google.com/file/d/1J518NcretD8Kt7GlLWXCuZWPXdbuLTCg/view?usp=sharing
+
+**Final Report (PPT):** https://drive.google.com/file/d/1yPUp0C_nsBfE8ixeWydiBTLcpHxjaTUe/view?usp=sharing
 
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
