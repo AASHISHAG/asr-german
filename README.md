@@ -368,7 +368,7 @@ Preprocess data so that each clip contains information regarding the specifics o
    ```	
 	
 
-   The above steps are enough to train the model with new data. If necessary, the other stages of speech recognition can also be modeled under the following:
+   The above steps are enough to train the model with new data. If necessary, the other stages of speech recognition can also be modeled at line:
 	
 	- [Phoneme](recipe_v2/run.sh#L80)
 	
