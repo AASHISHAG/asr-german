@@ -18,6 +18,16 @@ This project aims to develop a working Speech to Text module using [Kaldi](http:
 - [x] Presentation + Demo
 - [x] Documentation
 
+## Important Links:
+
+**Blog:** https://aashishag.github.io/blog/
+
+**Website:** https://aashishag.github.io/asr-german/
+
+**Demo:** https://drive.google.com/file/d/1J518NcretD8Kt7GlLWXCuZWPXdbuLTCg/view?usp=sharing
+
+**Final Report (PPT):** https://drive.google.com/file/d/1yPUp0C_nsBfE8ixeWydiBTLcpHxjaTUe/view?usp=sharing
+
 This Readme will be updated regularly to include information about the code and guidelines to use this software.
 
 #### Contents
@@ -27,8 +37,7 @@ This Readme will be updated regularly to include information about the code and 
 3. [Training](#training)
 4. [Some Training Results](#some-training-results)
 5. [Running code at Case HPC](#running-code-at-case-hpc)
-6. [Important Links](#important-links)
-7. [Acknowledgments](#acknowledgments)
+6. [Acknowledgments](#acknowledgments)
 
 ## Getting Started
 
@@ -629,16 +638,6 @@ ASR_02|2019-08-22 12:37|Source_Program=Kaldi,infer.sh|Source_Person=Aashish Agar
 END|20190817150956|2019-08-17_1500_DE_DasErste_Tagesschau
 ```
 	
-## Important Links:
-
-**Blog:** https://aashishag.github.io/blog/
-
-**Website:** https://aashishag.github.io/asr-german/
-
-**Demo:** https://drive.google.com/file/d/1J518NcretD8Kt7GlLWXCuZWPXdbuLTCg/view?usp=sharing
-
-**Final Report (PPT):** https://drive.google.com/file/d/1yPUp0C_nsBfE8ixeWydiBTLcpHxjaTUe/view?usp=sharing
-
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
 * [Red Hen Lab](http://www.redhenlab.org/)
