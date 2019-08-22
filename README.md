@@ -558,7 +558,7 @@ $ ./run-model.slurm specify_the_number_of_days_from_the_current_date_the_model_s
 
 * This is a small excerpt from the Red Hen News Dataset. The MP4 files are programmatically converted to WAV and fed to Kaldi-Gstreamer-Server. The model output, i.e., the transcripts are further formatted to adopt [Red Hen's Data Format](https://sites.google.com/site/distributedlittleredhen/home/the-cognitive-core-research-topics-in-red-hen/red-hen-data-format#TOC-Audio-Pipeline-Tags).
 	
-**_Continous Speech Transcript_**
+**_Continuous Speech Transcript_**
 	
 ``` bash	
 TOP|20190817150002|2019-08-17_1500_DE_DasErste_Tagesschau
