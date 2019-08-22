@@ -540,19 +540,28 @@ $ ./run-model.sh path_to_audio
 
 _**NOTE:** Give the complete path from root._
 	
-* Transcribe Red Hen News dataset
+* Transcribe Red Hen News dataset (_Continuous Speech_)
 	
 ``` bash
 $ ./run-model.slurm specify_the_number_of_days_from_the_current_date_the_model_should_transcribe
 ```
 
+* Transcribe Red Hen News dataset (_Voice Activity Detection_)
+	
+``` bash
+$ ./run-model-vad.slurm specify_the_number_of_days_from_the_current_date_the_model_should_transcribe
+```
+
 **_EXAMPLE:_** 
 	
 ./run-model.slurm (_if model should transcribe today's news_)
+./run-model-vad.slurm (_if model should transcribe today's news_)
 	
 ./run-model.slurm 1 (_if model should transcribe yesterday's news_)
+./run-model-vad.slurm 1 (_if model should transcribe yesterday's news_)
 	
 ./run-model.slurm 2 (_if model should transcribe day before yesterday's news_)
+./run-model-vad.slurm 2 (_if model should transcribe day before yesterday's news_)
 	
 ### Results of Red Hen News Dataset
 
