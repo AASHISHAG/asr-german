@@ -515,6 +515,7 @@ The entire project setup is available at _/mnt/rds/redhen/gallina/home/axa1142/_
 ``` bash
 $ module load singularity
 $ singularity pull --name kaldi_de.sif shub://AASHISHAG1/test:kaldi
+$ singularity shell -e -H `pwd` singularity-images/kaldi_de.sif
 ```
 
 _**NOTE:** This step is shown just for documentation. The below scripts would do it automatically._
