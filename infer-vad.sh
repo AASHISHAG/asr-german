@@ -5,6 +5,10 @@
 # exit when any command fails
 # set -e
 
+#pip install webrtcvad
+#pip install soundfile
+pip install numpy
+
 echo "   Starting infer.sh for Automated Speech Recognition   "
 
 cd ..
@@ -49,6 +53,8 @@ find . -name '*_DE_*.mp4' ! -iname "*KCET*" -exec cp {} $MYHOME/temp_data/ \;
 # Working directory -- it's unclear we really need to copy the files -- a downside is that unprocessed files remain in this location
 cd $MYHOME/temp_data
 
+#cp ../2019-08-17_1700_DE_ZDF_heute.mp4 .
+
 # If there are no files for a particular day, alert us with an e-mail
 # if [ -z "$(ls -A $DAT*.mp4)" ]; then
 #       which mail
@@ -67,47 +73,53 @@ for FIL in $DAT*.mp4 ; do n=$[n+1]
 
 # Extract and split the a32000 {FIL%%.*}.wav
   ffmpeg -i $FIL -ac 1 -ar 32000 ${FIL%%.*}.wav
-#  mkdir -p ${FIL%%.*}
+  mkdir -p ${FIL%%.*}
 
 # Use VAD to split the whole audio into piece
-#  python ../code/audiosplit.py \
-#    --target_dir=$PWDDIR/temp_data/${FIL%%.*}.wav \
-#    --output_dir=$PWDDIR/temp_data/${FIL%%.*}
+  python ../audiosplit.py \
+    --target_dir=$MYHOME/temp_data/${FIL%%.*}.wav \
+    --output_dir=$MYHOME/temp_data/${FIL%%.*}
   
-  rm ${FIL%%.*}.mp4
-#  rm $FIL
+  rm ${FIL%%.*}.wav
+  rm $FIL
 
 # For all the pieces that are longer than 30 seconds, split them again
-#  python ../code/audiosplit.py \
-#    --target_dir=$PWDDIR/temp_data/${FIL%%.*}  --output_dir=$PWDDIR/temp_data/${FIL%%.*}
+#  python ../audiosplit.py \
+#    --target_dir=$MYHOME/temp_data/${FIL%%.*}  --output_dir=$MYHOME/temp_data/${FIL%%.*}
 #  echo $FIL' split completed' 
 done
 
 # Completed
-# if [ "$m" -eq "$n" ] ; then exit ; fi
+ if [ "$m" -eq "$n" ] ; then exit ; fi
 
 rm -rf $MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT
 
 # Create manifests
-#for FIL in `ls -d $DAT*` ; do
+for FIL in `ls -d $DAT*` ; do
 
-	# Skip existing files
-#   if [ -f $PWDDIR'/new_text/'$YEAR/$MONTH/$DAT/${FIL%.*}.txt ] ; then echo -e "\tSkipping manifest for $FIL" ; continue ; fi
-
-#   python manifest.py \
-#     --target_dir=$PWDDIR/temp_data/$FIL  \
-#     --manifest_path=$PWDDIR/temp_manifest/$FIL
-#done
+   # Skip existing files
+   if [ -f $MYHOME'/new_text/'$YEAR/$MONTH/$DAT/${FIL%.*}.txt ] ; then echo -e "\tSkipping manifest for $FIL" ; continue ; fi
+   echo $DAT
+   mkdir -p $MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT
+   python ../manifest.py \
+     --target_dir=$MYHOME/temp_data/$FIL  \
+     --manifest_path=$MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT/$FIL
+done
 
 for manifest in $DAT* ; do
 	 echo -e "\n\tRunning ASR on $manifest ...\n"
          mkdir -p $MYHOME'/new_text/'$YEAR/$MONTH/$DAT
 	 mkdir -p $MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT
-	 python /mnt/rds/redhen/gallina/home/axa1142/kaldi/tools/kaldi-gstreamer-server/kaldigstserver/client.py -r 32000 --save-adaptation-state adaptation-state.json $manifest > $MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.txt'
-         sleep 2m
-	 python -u ../infer.py \
-            --output_file=$MYHOME'/new_text/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.asr' \
+         jq -c '.audio_filepath' $MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT/${manifest%%.*} | while read i; do
+	     temp="${i%\"}"
+             i="${temp#\"}"
+	     python /mnt/rds/redhen/gallina/home/axa1142/kaldi/tools/kaldi-gstreamer-server/kaldigstserver/client.py -r 32000 --save-adaptation-state adaptation-state.json $i >> $MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.txt'
+             sleep 30
+         done
+	 python -u ../infer-vad.py \
+            --output_file=$MYHOME'/new_text/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.asr2' \
 	    --infer_manifest=$MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.txt' \
+	    --infer_manifest_duration=$MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT/${manifest%%.*} \
             --input_file=$BASEDIR'/tv/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.txt'
 done
 

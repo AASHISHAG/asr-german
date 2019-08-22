@@ -9,7 +9,7 @@ export SINGULARITY_BINDPATH="/mnt"
 cd /mnt/rds/redhen/gallina/home/axa1142
 
 # Task
-singularity exec -e --nv singularity-images/test_kaldi.sif bash infer.sh $1
+singularity exec -e --nv singularity-images/1.sif bash infer-vad.sh $1
 
 # Receipt
 echo -e "\n\tThe Deutsch ASR job is completed at: `date`\n"
