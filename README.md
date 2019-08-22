@@ -30,7 +30,7 @@ This project aims to develop a working Speech to Text module using [Kaldi](http:
 
 This Readme will be updated regularly to include information about the code and guidelines to use this software.
 
-#### Contents
+## Contents
 
 1. [Getting Started](#getting-started)
 2. [Data-Preprocessing for Training](#data-preprocessing-for-training)
