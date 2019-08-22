@@ -548,7 +548,7 @@ $ ./run-worker.sh
 $ ./run-model.sh path_to_audio
 ```
 
-_**NOTE:** Give the complete path from root._
+_**NOTE:** Give the complete path from the root._
 	
 * Transcribe Red Hen News dataset (_Continuous Speech_)
 	
