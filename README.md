@@ -2,7 +2,7 @@
 
 _This is my [Google Summer of Code 2019](https://summerofcode.withgoogle.com/projects/#5623384702976000) Project with the [Distributed Little Red Hen Lab](http://www.redhenlab.org/)._
 
-This project aims to develop a working Speech to Text module using [Kaldi](http://www.kaldi-asr.org/) for the Red Hen Lab’s current Audio processing pipeline. This system will be used to transcribe the Television news broadcast captured by Red Hen in Germany.
+This project aims to develop a working Speech to Text module using [Kaldi](http://www.kaldi-asr.org/) for the Red Hen Lab’s current Audio processing pipeline. Kaldi is a state-of-the-art automatic speech recognition (ASR) toolkit, containing almost any algorithm currently used in ASR systems. This system will be used to transcribe the Television news broadcast captured by Red Hen in Germany.
 
 ## TODOLIST
 

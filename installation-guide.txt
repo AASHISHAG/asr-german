@@ -1,0 +1,161 @@
+<The installtion steps are completely covered in ReadMe. This file is uploaded for backup.>
+
+Initial
+=======
+sudo apt-get update
+sudo apt-get install zlib1g-dev automake autoconf unzip sox libtool subversion -y
+
+CUDA 
+=====
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+https://developer.nvidia.com/cuda-downloads
+Ubuntu 18.04
+============
+sudo apt-get install linux-headers-$(uname -r)
+sudo dpkg -i cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67_1.0-1_amd64.deb
+sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+sudo apt-get update
+sudo apt-get install cuda
+
+Ubuntu 16.04
+============
+sudo apt-get install linux-headers-$(uname -r)
+wget https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda-repo-ubuntu1604-10-1-local-10.1.168-418.67_1.0-1_amd64.deb 
+sudo dpkg -i cuda-repo-ubuntu1604-10-1-local-10.1.168-418.67_1.0-1_amd64.deb
+sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+sudo apt-key add /var/cuda-repo-10-1-local-10.1.168-418.67/7fa2af80.pub
+sudo apt-get update
+sudo apt-get install cuda (-y ??)
+=====
+
+Kaldi
+=====
+====
+git clone https://github.com/kaldi-asr/kaldi.git kaldi-trunk --origin golden <tuda-de>
+git clone https://github.com/kaldi-asr/kaldi.git kaldi --origin upstream
+cd kaldi-trunk
+====
+cd tools
+***sudo apt-get install zlib1g-dev automake autoconf unzip sox libtool subversion python2.7 -y
+***sudo extras/install_mkl.sh
+***sudo extras/install_irstlm.sh (IRSTLM is not installed by default anymore. If you need IRSTLM Warning: use the script extras/install_irstlm.sh)
+************************************************************************
+***() Installation of IRSTLM finished successfully
+***() Please source the tools/extras/env.sh in your path.sh to enable it
+************************************************************************
+sudo extras/check_dependencies.sh
+make -j 4
+or
+sudo make USE_THREAD=0 FC=gfortran -j 4 <tuda-de>
+====
+cd ../src
+sudo ./configure --use-cuda --cudatk-dir=/usr/local/cuda/ --cuda-arch=-arch=sm_70 --shared <with gpu>
+or
+sudo ./configure --shared <without gpu>
+*****Please source the tools/extras/env.sh in your path.sh to enable it --> no action
+make -j clean depend; make -j 4
+====
+
+Swig
+====
+https://www.dev2qa.com/how-to-install-swig-on-macos-linux-and-windows/
+sudo apt-get install g++
+g++ --version
+sudo apt-get install libpcre3 libpcre3-dev -y
+wget https://netix.dl.sourceforge.net/project/swig/swig/swig-4.0.0/swig-4.0.0.tar.gz
+chmod 777 swig-4.0.0.tar.gz
+tar -xzvf swig-4.0.0.tar.gz
+cd swig-4.0.0/
+sudo ./configure --prefix=/home/rsa-key-20181219/swig-4.0.0
+sudo make -j 4
+sudo make install
+sudo vim /etc/profile
+export SWIG_PATH=/home/LTLab.lan/agarwal/backup/swig-4.0.0
+export SWIG_PATH=/home/rsa-key-20181219/swig-4.0.0/bin
+export PATH=$SWIG_PATH:$PATH
+source /etc/profile
+swig -version
+
+Python
+======
+sudo apt-get install python-pip -y
+sudo apt install python3-pip
+<optional> sudo apt install python3
+
+Python-Virtual Env:
+==================
+sudo apt-get update
+sudo apt-get install virtualenv -y
+mkdir python-environments
+cd python-environments
+virtualenv -p python3 env3.5.2
+source env3.5.2/bin/activate
+
+Sequitur-g2p
+============
+pip3 install numpy
+pip3 install git+https://github.com/sequitur-g2p/sequitur-g2p@master
+git clone https://github.com/sequitur-g2p/sequitur-g2p.git
+make -j 4
+
+Requirements
+============
+pip3 install requests beautifulsoup4 lxml
+
+Kaldi-Tuda-De
+=============
+cd /home/rsa-key-20181219/kaldi-trunk/egs
+git clone https://github.com/uhh-lt/kaldi-tuda-de.git
+cd kaldi-tuda-de/
+
+vi cmd.sh
+export sequitur_g2p="/home/LTLab.lan/agarwal/backup/sequitur-g2p/g2p.py"
+export sequitur_g2p="/home/rsa-key-20181219/sequitur-g2p/g2p.py"
+export nJobs=1
+export nDecodeJobs=1
+
+vi run.sh
+use_BAS_dictionaries=true
+add_swc_data=false
+add_mailabs_data=false
+add_extra_words=false
+
+cd data
+mkdir wav
+cd wav 
+chmod -R 777 .
+
+mkdir backup
+cp -R ../kaldi-trunk/ .
+************************************************************************************************************
+Nvidia (?)
+======
+sudo apt-get update -y
+sudo apt install nvidia-driver-390 -y
+sudo reboot
+nvidia-smi
+========= 
+sudo apt install nvidia-cuda-toolkit
+
+sudo wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
+sudo sh cuda_9.0.176_384.81_linux-run --override
+echo "export PATH=$PATH:/usr/local/cuda-9.0/bin" >> ~/.profile
+source ~/.profile
+nvcc --version
+======
+
+git clone https://github.com/kaldi-asr/kaldi.git
+ubuntu@ip-172-31-35-58:~/kaldi/tools$ make -j `nproc`
+ubuntu@ip-172-31-35-58:~/kaldi/tools$ extras/install_irstlm.sh
+ubuntu@ip-172-31-35-58:~/kaldi/src$ ./configure --shared
+ubuntu@ip-172-31-35-58:~/kaldi/src$ make depend -j `nproc`
+ubuntu@ip-172-31-35-58:~/kaldi/src$ make -j `nproc`
+
+
+
+
+
+
+
+
+
