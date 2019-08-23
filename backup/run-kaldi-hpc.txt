@@ -1,0 +1,12 @@
+<The installtion steps are completely covered in ReadMe. This file is uploaded for backup.>
+
+module load singularity
+singularity exec singularity-images/kaldi_de.sif python kaldi/tools/kaldi-gstreamer-server/kaldigstserver/master_server.py --port=8888
+
+module load singularity
+singularity shell -e -H `pwd` singularity-images/kaldi_de.sif
+cd /mnt/rds/redhen/gallina/home/axa1142/kaldi/tools/kaldi-gstreamer-server
+./run_kaldi_de.sh
+
+module load singularity
+singularity exec singularity-images/kaldi_de.sif python /mnt/rds/redhen/gallina/home/axa1142/kaldi/tools/kaldi-gstreamer-server/kaldigstserver/client.py -r 32000 --save-adaptation-state adaptation-state.json  /mnt/rds/redhen/gallina/home/axa1142/kaldi/tools/kaldi-gstreamer-server/test/data/Aspekte2neu_AB_03.mp3 
