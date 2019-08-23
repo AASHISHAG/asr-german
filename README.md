@@ -24,9 +24,9 @@ This project aims to develop a working Speech to Text module using [Kaldi](http:
 
 **Website:** https://aashishag.github.io/asr-german/
 
-**Demo:** https://drive.google.com/file/d/1J518NcretD8Kt7GlLWXCuZWPXdbuLTCg/view?usp=sharing
+**Demo:** https://drive.google.com/file/d/1GKOP4KyORPHvhIS-FoQrAMIiBHGjGopb/view?usp=sharing
 
-**Final Report (PPT):** https://drive.google.com/file/d/1yPUp0C_nsBfE8ixeWydiBTLcpHxjaTUe/view?usp=sharing
+**Final Report (PPT):** https://drive.google.com/file/d/1giYkpsQFwISCXiKsb_rw3Nde0LDKqEr5/view?usp=sharing
 
 This Readme will be updated regularly to include information about the code and guidelines to use this software.
 
