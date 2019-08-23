@@ -651,11 +651,11 @@ Example:
 
 Send audio to server:
 
-     curl  -T path_to_audio "http://localhost:8888/client/dynamic/recognize"
+     curl -T path_to_audio "http://localhost:8888/client/dynamic/recognize"
 
 Output:
 
-    {"status": 0, "hypotheses": [{"utterance": "one two or three you fall five six seven eight. [noise]."}], "id": "7851281f-e187-4c24-9b58-4f3a5cba3dce"}
+    {"status": 0, "hypotheses": [{"utterance": "Garrett erinnerte sich daran dass er einst einen Eid geschworen hatte."}], "id": "d8ebe9ee-ba4a-41f7-8ffc-34a3af902e9c"}
 	
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
