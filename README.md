@@ -642,9 +642,10 @@ END|20190817150956|2019-08-17_1500_DE_DasErste_Tagesschau
 Alternative usage through a HTTP API
 ---------------------------------------
 
-One can also use the server through a very simple HTTP-based API. This allows to simply send audio via a PUT or POST request
-to http://server:port/client/dynamic/recognize and read the JSON ouput. 
-*_NOTE: This will only transcribe a sample audio into JSON, not in Red Hen's data format._* 
+One can also use the server through a very simple HTTP-based API. This allows to send audio via a PUT or POST request
+to http://server:port/client/dynamic/recognize and read the JSON output. 
+
+**_NOTE: This will only transcribe sample audio into JSON, but not in Red Hen's data format._**
 
 Example:
 
