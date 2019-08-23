@@ -643,16 +643,14 @@ Alternative usage through a HTTP API
 ---------------------------------------
 
 One can also use the server through a very simple HTTP-based API. This allows to simply send audio via a PUT or POST request
-to http://server:port/client/dynamic/recognize and read the JSON ouput. Note that the JSON output is differently structured
-than the output of the websocket-based API. This interface is compatible to the one implemented by http://github.com/alumae/ruby-pocketsphinx-server.
-
-The HTTP API supports chunked transfer encoding which means that server can read and decode an audio stream before it is complete.
+to http://server:port/client/dynamic/recognize and read the JSON ouput. 
+*_NOTE: This will only transcribe a sample audio into JSON, not in Red Hen's data format._* 
 
 Example:
 
 Send audio to server:
 
-     curl  -T test/data/english_test.wav  "http://localhost:8888/client/dynamic/recognize"
+     curl  -T path_to_audio "http://localhost:8888/client/dynamic/recognize"
 
 Output:
 
