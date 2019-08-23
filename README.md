@@ -638,6 +638,25 @@ ASR_02|2019-08-22 12:37|Source_Program=Kaldi,infer-vad.sh|Source_Person=Aashish 
 20190817150931.800000|20190817150955.080|ASR_02|<UNK>.
 END|20190817150956|2019-08-17_1500_DE_DasErste_Tagesschau
 ```
+
+Alternative usage through a HTTP API
+---------------------------------------
+
+One can also use the server through a very simple HTTP-based API. This allows to simply send audio via a PUT or POST request
+to http://server:port/client/dynamic/recognize and read the JSON ouput. Note that the JSON output is differently structured
+than the output of the websocket-based API. This interface is compatible to the one implemented by http://github.com/alumae/ruby-pocketsphinx-server.
+
+The HTTP API supports chunked transfer encoding which means that server can read and decode an audio stream before it is complete.
+
+Example:
+
+Send audio to server:
+
+     curl  -T test/data/english_test.wav  "http://localhost:8888/client/dynamic/recognize"
+
+Output:
+
+    {"status": 0, "hypotheses": [{"utterance": "one two or three you fall five six seven eight. [noise]."}], "id": "7851281f-e187-4c24-9b58-4f3a5cba3dce"}
 	
 ## Acknowledgments
 * [Google Summer of Code 2019](https://summerofcode.withgoogle.com/)
