@@ -120,7 +120,8 @@ for manifest in $DAT* ; do
             --output_file=$MYHOME'/new_text/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.asr2' \
 	    --infer_manifest=$MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.txt' \
 	    --infer_manifest_duration=$MYHOME'/temp_manifest/'$YEAR/$MONTH/$DAT/${manifest%%.*} \
-            --input_file=$BASEDIR'/tv/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.txt'
+        --input_file=$BASEDIR'/tv/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.txt'
+	 sed -i '/CC1|/d' /$MYHOME'/new_text/'$YEAR/$MONTH/$DAT/${manifest%%.*}'.asr2'
 done
 
 exit 0

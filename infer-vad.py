@@ -64,7 +64,7 @@ def infer():
                 f.write(prefix)
                 f.write(transcript.split('\n')[0])
                 f.write('\n')
-                start_time = end
+                start_time = end[:-3]
 
     with open(args.output_file, 'a+') as f:
         f.write(end_line)
